@@ -1,0 +1,40 @@
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.page__body {
+    font-family: "Eastman", sans-serif;
+    color: $main-color;
+    background-color: #fbfbfc;
+
+    &--w-poopup {
+        overflow: hidden;
+    }
+}
+
+.page__wrapper {
+    position: relative;
+}
+
+.section__title {
+    font-weight: 300;
+    font-size: 80px;
+    line-height: 125%;
+
+    padding-left: 86px;
+
+    &::before {
+        content: "Navy";
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 33px;
+        color: rgba(16, 36, 58, 0.5);
+    }
+}
