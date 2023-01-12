@@ -1,6 +1,17 @@
 import { isWebp, headerFixed } from "./modules";
 import createHomeHotelSlider from "./modules/home-hotel-slider";
-import Swiper, { Navigation, Pagination, Autoplay, Lazy } from "swiper";
+import Swiper, {
+    Navigation,
+    Pagination,
+    Autoplay,
+    Lazy,
+    EffectFade,
+} from "swiper";
+
+Swiper.use([Navigation, Pagination, Autoplay, Lazy, EffectFade]);
+
+import createHomeIntroSlider from "./modules/home-intro-slider";
+import menuHaandler from "./modules/menu-handler";
 /* Раскомментировать для использования */
 // import { MousePRLX } from './libs/parallaxMouse'
 
@@ -20,4 +31,8 @@ isWebp();
 // ====================================================================================================================================================
 document.addEventListener("DOMContentLoaded", function (evt) {
     createHomeHotelSlider(Swiper);
+
+    createHomeIntroSlider(Swiper);
+
+    menuHaandler();
 });

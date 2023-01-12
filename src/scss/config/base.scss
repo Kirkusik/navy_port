@@ -12,7 +12,7 @@
     color: $main-color;
     background-color: #fbfbfc;
 
-    &--w-poopup {
+    &--w-popup {
         overflow: hidden;
     }
 }
@@ -26,7 +26,8 @@
     font-size: 80px;
     line-height: 125%;
 
-    padding-left: 86px;
+    padding-left: $section-padding-left;
+    padding-right: $section-padding-right;
 
     &::before {
         content: "Navy";
