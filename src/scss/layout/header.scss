@@ -70,6 +70,12 @@
 
     background-color: #10243a;
 
+    display: none;
+
+    &--visible {
+        display: block;
+    }
+
     &::after {
         content: "";
         position: fixed;
@@ -97,7 +103,7 @@
     display: flex;
 
     font-weight: 300;
-    @include fz(54, 24);
+    @include fz(32, 18);
     line-height: 1.4;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.5);
