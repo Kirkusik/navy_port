@@ -1127,7 +1127,7 @@ template {
         18px + (24 - 18) * (100vw - 320px) /
             (1920 - 320)
     );
-  line-height: 1.15;
+  line-height: 1.5;
 }
 
 .hotel {
