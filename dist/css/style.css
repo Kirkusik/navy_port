@@ -471,7 +471,10 @@ template {
 
 .section__title {
   font-weight: 300;
-  font-size: 80px;
+  font-size: calc(
+        40px + (60 - 40) * (100vw - 320px) /
+            (1920 - 320)
+    );
   line-height: 125%;
   padding-left: 86px;
   padding-right: 86px;
@@ -482,8 +485,8 @@ template {
   display: block;
   margin-bottom: 10px;
   font-weight: 400;
-  font-size: 25px;
-  line-height: 33px;
+  font-size: 20px;
+  line-height: 1.3;
   color: rgba(16, 36, 58, 0.5);
 }
 
@@ -835,7 +838,7 @@ template {
   display: flex;
   font-weight: 300;
   font-size: calc(
-        18px + (32 - 18) * (100vw - 320px) /
+        16px + (24 - 16) * (100vw - 320px) /
             (1920 - 320)
     );
   line-height: 1.4;
@@ -867,7 +870,10 @@ template {
 .main-menu__sublist-link {
   display: block;
   font-weight: 300;
-  font-size: 36px;
+  font-size: calc(
+        16px + (24 - 16) * (100vw - 320px) /
+            (1920 - 320)
+    );
   line-height: 150%;
   color: #ffffff;
 }
@@ -901,8 +907,11 @@ template {
 
 .lang-switcher__link {
   font-weight: 300;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: calc(
+        16px + (18 - 16) * (100vw - 320px) /
+            (1920 - 320)
+    );
+  line-height: 100%;
   color: #b0b0b0;
   text-transform: uppercase;
 }
@@ -916,8 +925,11 @@ template {
       -ms-grid-row-align: center;
       align-self: center;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: calc(
+        16px + (18 - 16) * (100vw - 320px) /
+            (1920 - 320)
+    );
+  line-height: 100%;
   text-transform: uppercase;
   color: #ffffff;
   margin-right: 73px;
@@ -926,8 +938,11 @@ template {
 
 .booking {
   font-weight: 300;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: calc(
+        16px + (18 - 16) * (100vw - 320px) /
+            (1920 - 320)
+    );
+  line-height: 100%;
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -976,19 +991,25 @@ template {
 
 .page__title {
   font-weight: 300;
-  font-size: 200px;
+  font-size: calc(
+        40px + (160 - 40) * (100vw - 320px) /
+            (1920 - 320)
+    );
   line-height: 160px;
   color: #fbfbfc;
   text-shadow: 0px 8px 6px rgba(0, 0, 0, 0.5);
   margin-top: 0;
-  margin-bottom: 42px;
+  margin-bottom: 20px;
   position: relative;
   z-index: 3;
 }
 
 .page__subtitle {
   font-weight: 300;
-  font-size: 80px;
+  font-size: calc(
+        24px + (60 - 24) * (100vw - 320px) /
+            (1920 - 320)
+    );
   line-height: 48px;
   color: #fbfbfc;
   text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.5);
@@ -1008,7 +1029,7 @@ template {
 }
 
 .intro__slide {
-  padding: 389px 93px 564px;
+  padding: 260px 93px 400px;
   position: relative;
   -webkit-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
@@ -1100,9 +1121,12 @@ template {
 }
 
 .about-us__text {
-  max-width: 545px;
+  max-width: 50%;
   font-weight: 500;
-  font-size: 28px;
+  font-size: calc(
+        18px + (24 - 18) * (100vw - 320px) /
+            (1920 - 320)
+    );
   line-height: 1.15;
 }
 
@@ -1123,8 +1147,8 @@ template {
 
 .hotel__slider-item {
   position: relative;
-  padding-bottom: 129px;
-  max-width: 840px;
+  padding-bottom: 100px;
+  max-width: 50%;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   -o-transition: transform 0.5s;
@@ -1152,11 +1176,11 @@ template {
 .hotel__desc {
   background-color: #10243a;
   border-radius: 40px;
-  padding: 41px 33px 45px;
+  padding: 32px 24px 36px;
   position: absolute;
   bottom: 0;
   right: -74px;
-  width: 485px;
+  width: 420px;
   -webkit-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
@@ -1165,7 +1189,10 @@ template {
 .hotel__type {
   font-style: italic;
   font-weight: 300;
-  font-size: 38px;
+  font-size: calc(
+        24px + (32 - 24) * (100vw - 320px) /
+            (1920 - 320)
+    );
   line-height: 110%;
   color: #fbfbfc;
   margin-top: 0;
@@ -1174,7 +1201,10 @@ template {
 
 .hotel__booking {
   font-weight: 300;
-  font-size: 22px;
+  font-size: calc(
+        16px + (18 - 16) * (100vw - 320px) /
+            (1920 - 320)
+    );
   line-height: 100%;
   color: #fbfbfc;
   border: 1px solid #fbfbfc;
@@ -1195,8 +1225,8 @@ template {
   position: absolute;
   z-index: 33;
   top: 35%;
-  width: 115px;
-  height: 115px;
+  width: 85px;
+  height: 85px;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1339,7 +1369,10 @@ template {
 
 .footer-menu__link {
   font-weight: 300;
-  font-size: 36px;
+  font-size: calc(
+        20px + (28 - 20) * (100vw - 320px) /
+            (1920 - 320)
+    );
   line-height: 1;
   text-transform: uppercase;
   color: #868f9b;
@@ -1361,9 +1394,9 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 48px;
-     -moz-column-gap: 48px;
-          column-gap: 48px;
+  -webkit-column-gap: 32px;
+     -moz-column-gap: 32px;
+          column-gap: 32px;
 }
 
 .footer-socials__link {
@@ -1373,8 +1406,8 @@ template {
 }
 
 .footer-socials__link svg {
-  width: 71px;
-  height: 72px;
+  width: 50px;
+  height: 50px;
 }
 
 .copyright-wrapper {
@@ -1394,7 +1427,10 @@ template {
 
 .copyright {
   font-weight: 400;
-  font-size: 22px;
+  font-size: calc(
+        16px + (18 - 16) * (100vw - 320px) /
+            (1920 - 320)
+    );
   line-height: 164%;
   text-transform: uppercase;
   color: #10243a;
