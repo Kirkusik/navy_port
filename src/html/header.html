@@ -2,7 +2,7 @@
     <button class="menu-toggle">
         <svg
             class="menu-toggle-close menu-toggle-visible"
-            width="36"
+            width="32"
             viewBox="0 0 36 15"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -13,7 +13,7 @@
 
         <svg
             class="menu-toggle-open"
-            width="36"
+            width="32"
             viewBox="0 0 26 26"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@
             />
         </svg>
 
-        МЕНЮ
+        <span>МЕНЮ</span>
     </button>
 
     <nav class="page__nav">
@@ -65,13 +65,13 @@
                     <li class="main-menu__sublist-item">
                         <a href="" class="main-menu__sublist-link">
                             БАСЕЙН 1
-                            <img src="./images/pool1.png" alt="" />
+                            <img src="./images/pool1.png" alt="" height="200" />
                         </a>
                     </li>
                     <li class="main-menu__sublist-item">
                         <a href="" class="main-menu__sublist-link">
                             БАСЕЙН 2
-                            <img src="./images/pool2.png" alt="" />
+                            <img src="./images/pool2.png" alt="" height="200" />
                         </a>
                     </li>
                 </ul>
@@ -96,10 +96,35 @@
             </li>
         </ul>
 
-        <div class="page-nav__meta"></div>
+        <div class="page-nav__meta nav-meta">
+            <p class="nav-meta__item nav-meta__call-us">
+                Подзвони нам: <a href="tel: 0443554444">0443554444</a>
+            </p>
+            <p class="nav-meta__item nav-meta__socials">
+                Підписуйся:
+                <span><a href="">Facebook</a> <a href="">Instagram</a></span>
+            </p>
+        </div>
+
+        <ul class="lang-switcher lang-switcher--mobile">
+            <li class="lang-switcher__item">
+                <a href="#" class="lang-switcher__link">en</a>
+            </li>
+            <li class="lang-switcher__item">
+                <a
+                    href="#"
+                    class="lang-switcher__link lang-switcher__link--active"
+                >
+                    ua
+                </a>
+            </li>
+            <li class="lang-switcher__item">
+                <a href="#" class="lang-switcher__link">ru</a>
+            </li>
+        </ul>
     </nav>
 
-    <ul class="lang-switcher">
+    <ul class="lang-switcher lang-switcher--desktop">
         <li class="lang-switcher__item">
             <a href="#" class="lang-switcher__link">en</a>
         </li>
@@ -118,12 +143,12 @@
             src="./images/logo-white.png"
             alt=""
             class="page__logo-img"
-            width="242"
-            height="64"
+            height="50"
+            width="186"
         />
     </a>
 
-    <a href="#" class="personal-cabinet"> особистий кабінет </a>
+    <a href="#" class="personal-cabinet"> <span>особистий кабінет</span> </a>
 
     <a href="#" class="booking"> БРОНЮВАТИ </a>
 </header>

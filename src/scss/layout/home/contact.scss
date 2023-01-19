@@ -10,6 +10,27 @@
     display: grid;
     grid-template-columns: 4fr 6fr;
     column-gap: 78px;
+
+    @include mq(1200) {
+        column-gap: 40px;
+        margin-top: 100px;
+        padding-left: $section-padding-left--1200;
+        padding-right: $section-padding-right--1200;
+    }
+    @include mq(992) {
+        margin-top: 80px;
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+        justify-content: center;
+    }
+    @include mq(768) {
+        margin-top: 60px;
+    }
+    @include mq(640) {
+        margin-top: 24px;
+        padding-left: $section-padding-left--640;
+        padding-right: $section-padding-right--640;
+    }
 }
 
 .contact__map {
@@ -17,10 +38,21 @@
     overflow: hidden;
 
     position: relative;
-    padding: 35px 29px;
+    padding: 35px 32px;
     height: 370px;
     display: grid;
     align-content: space-between;
+
+    @include mq(1200) {
+        height: 350px;
+    }
+    @include mq(992) {
+        border-radius: 10px;
+        padding: 30px 28px;
+    }
+    @include mq(768) {
+        padding: 15px 17px;
+    }
 
     &::after {
         content: "";
@@ -48,7 +80,7 @@
     z-index: 1;
     margin: 0;
 
-    font-size: 26px;
+    @include fz(26, 16);
     line-height: 28px;
     font-weight: 300;
     color: #ffffff;
@@ -59,7 +91,7 @@
     z-index: 1;
     margin: 0;
 
-    font-size: 58px;
+    @include fz(58, 28);
     font-weight: 500;
     color: rgba(255, 255, 255, 0.8);
 }
@@ -78,20 +110,58 @@
     background-size: 260px 70px;
     background-repeat: no-repeat;
     background-position: bottom 35px left 32px;
+
+    @include mq(1200) {
+        background-size: 200px;
+        background-position: bottom 35px left 32px;
+    }
+
+    @include mq(992) {
+        min-height: 360px;
+        border-radius: 10px;
+        padding: 30px 28px;
+        background-size: 140px;
+        background-position: bottom 30px left 28px;
+    }
+
+    @include mq(768) {
+        padding: 15px 17px;
+        background-size: 96px;
+        background-position: bottom 15px left 17px;
+    }
+    @include mq(576) {
+        min-height: 200px;
+    }
 }
 
 .contact__text {
     font-weight: 500;
-    font-size: 26px;
+    @include fz(26, 16);
     line-height: 130%;
     color: #fbfbfc;
 
     max-width: 396px;
+
+    margin: 0;
+
+    @include mq(992) {
+        margin-bottom: 100px;
+        max-width: 60%;
+    }
+    @include mq(768) {
+        margin-bottom: auto;
+    }
+    @include mq(567) {
+        max-width: 70%;
+    }
+    @include mq(480) {
+        max-width: 90%;
+    }
 }
 
 .contact__address-title {
     font-weight: 500;
-    font-size: 58px;
+    @include fz(58, 18);
     line-height: 1;
     color: #fbfbfc;
 

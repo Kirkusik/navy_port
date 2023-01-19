@@ -4,6 +4,9 @@ export default function menuHaandler() {
     menuToggleBtn.addEventListener("click", function () {
         document.body.classList.toggle("page__body--w-popup");
         document
+            .querySelector(".page__header")
+            .classList.toggle("page__header--menu-show");
+        document
             .querySelector(".page__nav")
             .classList.toggle("page__nav--visible");
 

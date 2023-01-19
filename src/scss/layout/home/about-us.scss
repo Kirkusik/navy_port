@@ -1,21 +1,88 @@
 .about-us {
     padding-top: 100px;
     padding-bottom: 100px;
+
+    @include mq(1200) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    @include mq(992) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include mq(768) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
 }
 
 .about-us__title {
     margin-bottom: 154px;
     margin-top: 0;
+
+    @include mq(1200) {
+        margin-bottom: 120px;
+    }
+    @include mq(992) {
+        margin-bottom: 80px;
+    }
+    @include mq(768) {
+        margin-bottom: 60px;
+    }
+    @include mq(640) {
+        margin-bottom: 24px;
+    }
 }
 
 .about-us__description {
+    margin: 0;
     display: flex;
     justify-content: space-between;
+
+    padding-left: $section-padding-left;
+    padding-right: $section-padding-right;
+
+    @include mq(1200) {
+        padding-left: $section-padding-left--1200;
+        padding-right: $section-padding-right--1200;
+    }
+    @include mq(640) {
+        padding-left: $section-padding-left--640;
+        padding-right: $section-padding-right--640;
+    }
+
+    @include mq(800) {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 50px;
+    }
 }
 
 .about-us__text {
-    max-width: 545px;
+    max-width: 50%;
     font-weight: 500;
-    font-size: 28px;
-    line-height: 1.15;
+    @include fz(24, 16);
+    line-height: 1.5;
+
+    @include mq(1200) {
+        max-width: 55%;
+    }
+    @include mq(800) {
+        max-width: 100%;
+    }
+}
+
+.about-us__image {
+    @include mq(1200) {
+        object-fit: contain;
+        width: 40%;
+        height: auto;
+    }
+    @include mq(800) {
+        width: 50vw;
+        order: 1;
+    }
+    @include mq(576) {
+        width: 300px;
+    }
 }

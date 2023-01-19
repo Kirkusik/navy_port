@@ -1,6 +1,20 @@
 .hotel {
     padding-top: 60px;
     padding-bottom: 160px;
+
+    @include mq(1200) {
+        padding-top: 40px;
+        padding-bottom: 120px;
+    }
+    @include mq(992) {
+        padding-bottom: 100px;
+    }
+    @include mq(768) {
+        padding-bottom: 80px;
+    }
+    @include mq(576) {
+        padding-bottom: 60px;
+    }
 }
 
 .hotel__title {
@@ -15,8 +29,8 @@
 
 .hotel__slider-item {
     position: relative;
-    padding-bottom: 129px;
-    max-width: 840px;
+    padding-bottom: 100px;
+    max-width: 50%;
 
     transition: transform 0.5s;
 
@@ -28,6 +42,18 @@
             opacity: 0;
         }
     }
+
+    @include mq(992) {
+        padding-bottom: 80px;
+    }
+    @include mq(768) {
+        max-width: 80%;
+    }
+    @include mq(576) {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .hotel__img {
@@ -38,28 +64,50 @@
 .hotel__desc {
     background-color: #10243a;
     border-radius: 40px;
-    padding: 41px 33px 45px;
+    padding: 32px 24px 36px;
     position: absolute;
     bottom: 0;
     right: -74px;
-    width: 485px;
+    width: 420px;
 
     transition: opacity 0.5s;
+
+    @include mq(1200) {
+        padding: 20px 18px 24px;
+        width: 360px;
+    }
+    @include mq(992) {
+        padding-left: 30px;
+        padding-right: 30px;
+        right: 50%;
+
+        transform: translateX(50%);
+        width: max-content;
+        border-radius: 10px;
+        max-width: 80%;
+    }
 }
 
 .hotel__type {
     font-style: italic;
     font-weight: 300;
-    font-size: 38px;
+    @include fz(28, 14);
     line-height: 110%;
     color: #fbfbfc;
     margin-top: 0;
     margin-bottom: 59px;
+
+    @include mq(1200) {
+        margin-bottom: 40px;
+    }
+    @include mq(992) {
+        margin-bottom: 26px;
+    }
 }
 
 .hotel__booking {
     font-weight: 300;
-    font-size: 22px;
+    @include fz(18, 14);
     line-height: 100%;
     color: #fbfbfc;
 
@@ -71,6 +119,13 @@
     width: max-content;
     margin-left: auto;
     margin-right: auto;
+
+    @include mq(1200) {
+        padding: 16px 40px;
+    }
+    @include mq(992) {
+        padding: 12px 30px;
+    }
 }
 
 .hotel__nav-btn {
@@ -79,8 +134,8 @@
     position: absolute;
     z-index: 33;
     top: 35%;
-    width: 115px;
-    height: 115px;
+    width: 85px;
+    height: 85px;
     border-radius: 50%;
 
     display: flex;
@@ -89,10 +144,39 @@
 
     cursor: pointer;
 
+    @include mq(1200) {
+        top: 30%;
+        width: 65px;
+        height: 65px;
+
+        & svg {
+            width: 50%;
+        }
+    }
+    @include mq(992) {
+        width: 50px;
+        height: 50px;
+    }
+    @include mq(768) {
+        width: 40px;
+        height: 40px;
+    }
+    @include mq(576) {
+        background-color: #10243a;
+    }
+
     &.swiper-button-prev {
         left: 18%;
+
+        @include mq(576) {
+            left: 20px;
+        }
     }
     &.swiper-button-next {
         right: 18%;
+
+        @include mq(576) {
+            right: 20px;
+        }
     }
 }

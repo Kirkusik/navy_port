@@ -1,5 +1,26 @@
 .page-footer {
     padding: 115px $section-padding-right 50px $section-padding-left;
+
+    @include mq(1200) {
+        padding-left: $section-padding-left--1200;
+        padding-right: $section-padding-right--1200;
+    }
+    @include mq(992) {
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+    @include mq(768) {
+        padding-top: 80px;
+    }
+    @include mq(640) {
+        padding-left: $section-padding-left--640;
+        padding-right: $section-padding-right--640;
+        padding-top: 60px;
+    }
+
+    @include mq(576) {
+        padding-top: 40px;
+    }
 }
 
 .footer-menu {
@@ -10,12 +31,22 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     row-gap: 59px;
+
+    @include mq(1200) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+    @include mq(640) {
+        grid-template-columns: repeat(2, max-content);
+        justify-content: space-around;
+        gap: 20px;
+    }
 }
 
 .footer-menu__link {
     font-weight: 300;
-    font-size: 36px;
-    line-height: 1;
+    @include fz(28, 14);
+    line-height: 1.2;
     text-transform: uppercase;
     color: #868f9b;
 
@@ -34,15 +65,33 @@
     margin-bottom: 0;
 
     display: flex;
-    column-gap: 48px;
+    column-gap: 32px;
+
+    @include mq(1200) {
+        column-gap: 22px;
+        margin-top: 80px;
+    }
+    @include mq(640) {
+        margin-top: 43px;
+        margin-bottom: 30px;
+    }
 }
 
 .footer-socials__link {
     display: flex;
 
     & svg {
-        width: 71px;
-        height: 72px;
+        width: 50px;
+        height: 50px;
+
+        @include mq(1200) {
+            width: 40px;
+            height: 40px;
+        }
+        @include mq(640) {
+            width: 32px;
+            height: 32px;
+        }
     }
 }
 
@@ -54,7 +103,7 @@
 
 .copyright {
     font-weight: 400;
-    font-size: 22px;
+    @include fz(18, 6);
     line-height: 164%;
     text-transform: uppercase;
 
@@ -67,4 +116,24 @@
     background-size: contain;
     background-position: left center;
     background-repeat: no-repeat;
+
+    @include mq(1200) {
+        padding-left: 36px;
+    }
+    @include mq(640) {
+        padding-left: 26px;
+    }
+}
+
+.page-footer__logo {
+    object-fit: contain;
+
+    @include mq(1200) {
+        width: auto;
+        height: 40px;
+    }
+    @include mq(640) {
+        width: 84px;
+        height: 23px;
+    }
 }

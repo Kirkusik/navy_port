@@ -19,23 +19,34 @@
 
 .page__wrapper {
     position: relative;
+    // background-image: url(../images/main-decor.png);
+    // background-size: 100% 100%;
 }
 
 .section__title {
     font-weight: 300;
-    font-size: 80px;
+    @include fz(60, 40);
     line-height: 125%;
 
     padding-left: $section-padding-left;
     padding-right: $section-padding-right;
+
+    @include mq(1200) {
+        padding-left: $section-padding-left--1200;
+        padding-right: $section-padding-right--1200;
+    }
+    @include mq(640) {
+        padding-left: $section-padding-left--640;
+        padding-right: $section-padding-right--640;
+    }
 
     &::before {
         content: "Navy";
         display: block;
         margin-bottom: 10px;
         font-weight: 400;
-        font-size: 25px;
-        line-height: 33px;
+        font-size: 20px;
+        line-height: 1.3;
         color: rgba(16, 36, 58, 0.5);
     }
 }
