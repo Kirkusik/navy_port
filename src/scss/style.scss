@@ -21,9 +21,16 @@
 // Подключение стилей отдельных блоков и секций =======================================================================================================================
 @import "layout/header";
 
+// HOME PAGE STYLES
 @import "layout/home/intro";
 @import "layout/home/about-us";
 @import "layout/home/hotel";
 @import "layout/home/contact";
+
+// BREADCRUMBS STYLES
+@import "layout/breadcrumbs";
+
+// HOTEL PAGE STYLES
+@import "layout/hotel/rooms";
 
 @import "layout/footer";

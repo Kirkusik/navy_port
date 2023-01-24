@@ -19,8 +19,13 @@
 
 .page__wrapper {
     position: relative;
-    // background-image: url(../images/main-decor.png);
-    // background-size: 100% 100%;
+    background-image: url(../images/main-decor.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    &--inner {
+        background: none;
+    }
 }
 
 .section__title {
@@ -40,13 +45,98 @@
         padding-right: $section-padding-right--640;
     }
 
-    &::before {
-        content: "Navy";
-        display: block;
-        margin-bottom: 10px;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 1.3;
-        color: rgba(16, 36, 58, 0.5);
+    &--home-page {
+        &::before {
+            content: "Navy";
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 1.3;
+            color: rgba(16, 36, 58, 0.5);
+        }
+    }
+}
+
+.order-btn {
+    display: block;
+    max-width: 320px;
+    padding: 20px 48px;
+    border: 1px solid #000000;
+    border-radius: 40px;
+
+    margin-top: 56px;
+
+    font-weight: 300;
+    @include fz(24, 12);
+    line-height: 1;
+    text-align: center;
+    color: #10243a;
+
+    transition: color 0.5s, background-color 0.5s;
+
+    &:hover {
+        color: #ffffff;
+        background-color: #10243a;
+        border: 1px solid #10243a;
+    }
+
+    &--white {
+        color: #fff;
+        border-color: #fff;
+
+        &:hover {
+            color: #10243a;
+            background-color: #fff;
+        }
+    }
+
+    @include mq(1360) {
+        padding: 16px 40px;
+    }
+    @include mq(1200) {
+        padding: 14px 32px;
+        max-width: 300px;
+    }
+    @include mq(768) {
+        max-width: 260px;
+    }
+}
+
+.entity-types {
+    padding-left: $section-padding-left;
+    padding-right: $section-padding-right;
+
+    @include mq(1200) {
+        padding-left: $section-padding-left--1200;
+        padding-right: $section-padding-right--1200;
+    }
+    @include mq(640) {
+        padding-left: $section-padding-left--640;
+        padding-right: $section-padding-right--640;
+    }
+    width: 90vw;
+    margin: 0;
+    list-style-type: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 7vw;
+    row-gap: 32px;
+
+    @include mq(1360) {
+        width: 100%;
+        row-gap: 24px;
+        column-gap: 32px;
+    }
+}
+
+.entity-types__link {
+    @include fz(22, 16);
+    line-height: 1;
+    color: #10243a;
+
+    &:hover {
+        font-weight: 500;
     }
 }

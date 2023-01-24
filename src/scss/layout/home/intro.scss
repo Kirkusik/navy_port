@@ -39,7 +39,7 @@
 
 .page__title {
     font-weight: 300;
-    @include fz(160, 57);
+    @include fz(160, 80);
     line-height: 100%;
     color: #fbfbfc;
 
@@ -51,8 +51,9 @@
     position: relative;
     z-index: 3;
 
-    &--home {
-        @include fz(160, 80);
+    &--inner-page {
+        @include fz(160, 57);
+        text-align: center;
     }
 }
 
