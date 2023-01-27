@@ -62,7 +62,7 @@
 }
 
 .hotel__desc {
-    background-color: #10243a;
+    background-color: $main-color;
     border-radius: 40px;
     padding: 32px 24px 36px;
     position: absolute;
@@ -162,7 +162,7 @@
         height: 40px;
     }
     @include mq(576) {
-        background-color: #10243a;
+        background-color: $main-color;
     }
 
     &.swiper-button-prev {

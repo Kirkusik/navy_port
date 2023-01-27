@@ -388,17 +388,15 @@ template {
 .page__wrapper {
   position: relative;
   background-image: url(../images/main-decor.png);
-  background-size: 100% 100%;
+  background-size: 100% calc(100% - 80vw);
   background-repeat: no-repeat;
-}
-.page__wrapper--inner {
-  background: none;
+  background-position: top 70vw left;
 }
 
 .section__title {
   font-weight: 300;
   font-size: calc(
-        40px + (60 - 40) * (100vw - 320px) /
+        36px + (60 - 36) * (100vw - 320px) /
             (1920 - 320)
     );
   line-height: 125%;
@@ -477,13 +475,13 @@ template {
 .entity-types {
   padding-left: 86px;
   padding-right: 86px;
-  width: 90vw;
+  width: 1130px;
   margin: 0;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 7vw;
-  row-gap: 32px;
+  justify-content: space-between;
+  row-gap: 18px;
 }
 @media (max-width: 1200px) {
   .entity-types {
@@ -500,9 +498,18 @@ template {
 @media (max-width: 1360px) {
   .entity-types {
     width: 100%;
-    row-gap: 24px;
-    column-gap: 32px;
+    justify-content: flex-start;
   }
+}
+@media (max-width: 768px) {
+  .entity-types {
+    display: none;
+  }
+}
+
+.entity-types__item {
+  min-height: 32px;
+  margin-right: 40px;
 }
 
 .entity-types__link {
@@ -512,6 +519,9 @@ template {
     );
   line-height: 1;
   color: #10243a;
+}
+.entity-types__link--current {
+  font-weight: 500;
 }
 .entity-types__link:hover {
   font-weight: 500;
@@ -1092,7 +1102,6 @@ template {
   right: 0;
   bottom: 0;
   background-color: rgba(16, 36, 58, 0.5);
-  z-index: 2;
 }
 .intro--w-cover::after {
   content: "";
@@ -1123,6 +1132,7 @@ template {
     );
   line-height: 100%;
   color: #fbfbfc;
+  text-transform: uppercase;
   text-shadow: 0px 8px 6px rgba(0, 0, 0, 0.5);
   margin-top: 0;
   margin-bottom: 20px;
@@ -1135,6 +1145,13 @@ template {
             (1920 - 320)
     );
   text-align: center;
+}
+.page__title--rooms {
+  font-size: calc(
+        50px + (160 - 50) * (100vw - 320px) /
+            (1920 - 320)
+    );
+  width: min-content;
 }
 
 .page__subtitle {
@@ -1790,13 +1807,16 @@ template {
   display: flex;
   align-items: center;
 }
-.breadcrumbs__item:not(:last-child)::after {
+.breadcrumbs__item:not(:first-child)::before {
   content: "";
   width: 24px;
   border: 2px solid #bcc0c8;
   margin-left: 18px;
   margin-right: 18px;
   margin-top: 4px;
+}
+.breadcrumbs__item:last-child::before {
+  border-color: #000000;
 }
 
 .breadcrumbs__link {
@@ -2132,6 +2152,379 @@ template {
   justify-self: center;
 }
 
+.room-params__data {
+  margin-top: 68px;
+}
+@media (max-width: 1200px) {
+  .room-params__data {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 992px) {
+  .room-params__data {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .room-params__data {
+    margin-top: 0;
+  }
+}
+
+.room-data {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 107px;
+}
+@media (max-width: 1200px) {
+  .room-data {
+    grid-template-columns: 1fr;
+  }
+}
+
+.room-data__img {
+  box-shadow: 0px 12px 10px rgba(16, 36, 58, 0.4);
+  border-radius: 0px 40px 40px 0px;
+  grid-row: span 2;
+  align-self: start;
+}
+@media (max-width: 1200px) {
+  .room-data__img {
+    justify-self: center;
+    border-radius: 40px;
+    order: 1;
+  }
+}
+@media (max-width: 992px) {
+  .room-data__img {
+    height: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .room-data__img {
+    height: auto;
+    width: calc(100% - 60px);
+  }
+}
+
+.room-data__order {
+  margin-top: 115px;
+  margin-left: 10vw;
+}
+@media (max-width: 1360px) {
+  .room-data__order {
+    margin-left: 6vw;
+  }
+}
+@media (max-width: 1200px) {
+  .room-data__order {
+    order: 3;
+    margin-top: 60px;
+    margin-bottom: 32px;
+    margin-left: 66px;
+  }
+}
+@media (max-width: 768px) {
+  .room-data__order {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 640px) {
+  .room-data__order {
+    margin-left: 30px;
+  }
+}
+
+.room-data__list {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 10vw;
+  list-style-type: none;
+  max-width: 389px;
+}
+@media (max-width: 1360px) {
+  .room-data__list {
+    margin-left: 6vw;
+  }
+}
+@media (max-width: 1200px) {
+  .room-data__list {
+    order: 4;
+    margin-left: 66px;
+    margin-right: 66px;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 640px) {
+  .room-data__list {
+    margin-left: 30px;
+    margin-right: 30px;
+    row-gap: 20px;
+  }
+}
+
+.room-data__item {
+  font-weight: 300;
+  font-size: calc(
+        14px + (28 - 14) * (100vw - 320px) /
+            (1920 - 320)
+    );
+  line-height: 125%;
+  padding-left: 80px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+@media (max-width: 1200px) {
+  .room-data__item {
+    width: 33.3333333333%;
+    padding-top: 60px;
+    padding-left: 0;
+    background-position: top center;
+    text-align: center;
+  }
+}
+.room-data__item:not(:last-child) {
+  margin-bottom: 28px;
+}
+@media (max-width: 1200px) {
+  .room-data__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.room-data__item--wifi {
+  background-image: url(../images/room-icons/wifi.png);
+}
+.room-data__item--cosmetics {
+  background-image: url(../images/room-icons/cosmetics.png);
+}
+.room-data__item--hairdryer {
+  background-image: url(../images/room-icons/hairdryer.png);
+}
+.room-data__item--conditioner {
+  background-image: url(../images/room-icons/conditioner.png);
+}
+.room-data__item--minibar {
+  background-image: url(../images/room-icons/minibar.png);
+}
+.room-data__item--breakfast {
+  background-image: url(../images/room-icons/breakfast.png);
+}
+.room-data__item--shower {
+  background-image: url(../images/room-icons/shower.png);
+}
+.room-data__item--bath {
+  background-image: url(../images/room-icons/bath.png);
+}
+.room-data__item--terrace {
+  background-image: url(../images/room-icons/terrace.png);
+}
+.room-data__item--wardrobe {
+  background-image: url(../images/room-icons/wardrobe.png);
+}
+
+.room-data__specification {
+  padding-bottom: 116px;
+  padding-left: 86px;
+  padding-right: 86px;
+}
+@media (max-width: 1200px) {
+  .room-data__specification {
+    padding-left: 66px;
+    padding-right: 66px;
+    order: 2;
+    margin-top: 80px;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 640px) {
+  .room-data__specification {
+    margin-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .room-data__specification {
+    margin-top: 30px;
+  }
+}
+
+.room-specification__text {
+  font-weight: 500;
+  font-size: 24px;
+  font-size: calc(
+        16px + (24 - 16) * (100vw - 320px) /
+            (1920 - 320)
+    );
+  line-height: 125%;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.room-specification__comment {
+  font-weight: 500;
+  font-size: 20px;
+  font-size: calc(
+        12px + (20 - 12) * (100vw - 320px) /
+            (1920 - 320)
+    );
+  line-height: 125%;
+  margin: 0;
+}
+
+.room-data__add-img {
+  box-shadow: 0px 12px 10px rgba(16, 36, 58, 0.4);
+  object-fit: cover;
+}
+.room-data__add-img:nth-of-type(2) {
+  grid-row: span 2;
+  align-self: center;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  width: 100%;
+}
+@media (max-width: 1200px) {
+  .room-data__add-img:nth-of-type(2) {
+    order: 5;
+    grid-row: span 1;
+    height: 360px;
+    width: 80vw;
+    justify-self: center;
+    border-radius: 40px;
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 640px) {
+  .room-data__add-img:nth-of-type(2) {
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 230px;
+  }
+}
+.room-data__add-img:nth-of-type(3) {
+  border-radius: 40px;
+  margin-left: 86px;
+}
+@media (max-width: 1200px) {
+  .room-data__add-img:nth-of-type(3) {
+    order: 6;
+    margin-left: 0;
+    height: 560px;
+    width: auto;
+    justify-self: center;
+  }
+}
+@media (max-width: 640px) {
+  .room-data__add-img:nth-of-type(3) {
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 216px;
+    height: 291px;
+  }
+}
+
+.rooms-slider {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.rooms-slider__title {
+  font-weight: 300;
+  font-size: calc(
+        36px + (60 - 36) * (100vw - 320px) /
+            (1920 - 320)
+    );
+  line-height: 100%;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+@media (max-width: 1200px) {
+  .rooms-slider__title {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .rooms-slider__title {
+    margin-bottom: 32px;
+  }
+}
+
+.rooms-slider__wrapper {
+  max-width: calc(100% - 14vw);
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+@media (max-width: 1360px) {
+  .rooms-slider__wrapper {
+    max-width: 100%;
+  }
+}
+
+.rooms-slider__list {
+  padding-left: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0;
+  list-style-type: none;
+}
+
+.rooms-slider__item {
+  box-shadow: 0px 12px 10px rgba(16, 36, 58, 0.4);
+  border-radius: 40px;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+.rooms-slider__item:not(.swiper-slide-active) {
+  transform: scale(0.83);
+}
+.rooms-slider__item.swiper-slide-next {
+  transform: scale(0.83) translateX(-20%);
+  position: relative;
+  z-index: -1;
+}
+.rooms-slider__item.swiper-slide-prev {
+  transform: scale(0.83) translateX(20%);
+  position: relative;
+  z-index: -1;
+}
+.rooms-slider__item:not(.swiper-slide-visible) {
+  opacity: 0;
+}
+
+.rooms-slider__link {
+  display: flex;
+}
+
+.rooms-slider__img {
+  width: 100%;
+  object-fit: cover;
+}
+@media (max-width: 1360px) {
+  .rooms-slider__img {
+    height: 350px;
+  }
+}
+@media (max-width: 768px) {
+  .rooms-slider__img {
+    height: 280px;
+  }
+}
+@media (max-width: 640px) {
+  .rooms-slider__img {
+    height: 100px;
+  }
+}
+
 .page-footer {
   padding: 115px 86px 50px 86px;
 }
@@ -2199,6 +2592,10 @@ template {
   display: flex;
 }
 .footer-menu__link--current {
+  font-weight: 500;
+  color: #10243a;
+}
+.footer-menu__link:hover {
   font-weight: 500;
   color: #10243a;
 }

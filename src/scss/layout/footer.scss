@@ -54,7 +54,12 @@
 
     &--current {
         font-weight: 500;
-        color: #10243a;
+        color: $main-color;
+    }
+
+    &:hover {
+        font-weight: 500;
+        color: $main-color;
     }
 }
 
@@ -107,7 +112,7 @@
     line-height: 164%;
     text-transform: uppercase;
 
-    color: #10243a;
+    color: $main-color;
 
     padding-left: 56px;
     margin: 0;

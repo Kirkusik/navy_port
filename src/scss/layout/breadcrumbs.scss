@@ -25,14 +25,19 @@
     display: flex;
     align-items: center;
 
-    &:not(:last-child) {
-        &::after {
+    &:not(:first-child) {
+        &::before {
             content: "";
             width: 24px;
             border: 2px solid #bcc0c8;
             margin-left: 18px;
             margin-right: 18px;
             margin-top: 4px;
+        }
+    }
+    &:last-child {
+        &::before {
+            border-color: #000000;
         }
     }
 }

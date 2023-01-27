@@ -19,7 +19,7 @@
             top: 0;
             right: 0;
             bottom: 0;
-            background-color: #10243a;
+            background-color: $main-color;
             z-index: -1;
         }
     }
@@ -119,7 +119,7 @@
     overflow-y: auto;
     padding: 200px 145px 173px 160px;
 
-    background-color: #10243a;
+    background-color: $main-color;
 
     display: none;
 

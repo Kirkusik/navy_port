@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+    <partial src="head.html"></partial>
+
+    <body class="page__body">
+        <div class="page__wrapper page__wrapper--inner">
+            <partial src="header.html"></partial>
+
+            <main class="page__main">
+                <partial src="./standart-room/intro.html"></partial>
+
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item">
+                        <a href="/" class="breadcrumbs__link"> Головна </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="./hotel.html" class="breadcrumbs__link">
+                            Готель
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span
+                            class="breadcrumbs__link breadcrumbs__link--current"
+                        >
+                            Standart room
+                        </span>
+                    </li>
+                </ul>
+
+                <partial src="./standart-room/room-params.html"></partial>
+                <partial src="./rooms-slider.html"></partial>
+            </main>
+
+            <partial src="footer.html"></partial>
+        </div>
+
+        <partial src="script.html"></partial>
+    </body>
+</html>

@@ -197,7 +197,7 @@
     font-weight: 300;
     @include fz(28, 16);
     line-height: 130%;
-    color: #10243a;
+    color: $main-color;
 
     margin-top: 0;
     margin-bottom: 60px;
@@ -211,7 +211,7 @@
     font-weight: 500;
     @include fz(32, 14);
     line-height: 1;
-    color: #10243a;
+    color: $main-color;
 
     display: flex;
     align-items: center;
@@ -283,7 +283,7 @@
     position: relative;
     z-index: 1;
     padding: 14px 17px;
-    background-color: #10243a;
+    background-color: $main-color;
     border-radius: 20px;
 
     display: none;

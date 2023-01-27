@@ -12,6 +12,7 @@ Swiper.use([Navigation, Pagination, Autoplay, Lazy, EffectFade]);
 
 import createHomeIntroSlider from "./modules/home-intro-slider";
 import menuHaandler from "./modules/menu-handler";
+import createRoomsSlider from "./modules/rooms-slider";
 /* Раскомментировать для использования */
 // import { MousePRLX } from './libs/parallaxMouse'
 
@@ -33,6 +34,8 @@ document.addEventListener("DOMContentLoaded", function (evt) {
     createHomeHotelSlider(Swiper);
 
     createHomeIntroSlider(Swiper);
+
+    createRoomsSlider(Swiper);
 
     menuHaandler();
 });
