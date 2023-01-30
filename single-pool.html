@@ -111,120 +111,74 @@
 
             <a href="#" class="booking">БРОНЮВАТИ</a>
         </header>
-        <main class="page__main page__main--no-bgd">
-            <section class="section intro">
-                <div class="swiper intro__slider">
-                    <ul class="swiper-wrapper intro__slider-wrapper">
-                        <li class="swiper-slide intro__slide">
-                            <img src="./images/main-banner.jpg" alt="" class="intro__img">
-                            <p class="page__title">NAVY</p>
-                            <p class="page__subtitle">порт твого відпочинку</p>
+        <main class="page__main">
+            <img src="./images/s-like.svg" alt="" class="decor-img decor-img--single-pool" aria-hidden="true">
+            <!-- <img src="./images/single-pool-decor-mobile.png" alt="" class="decor-img
+            decor-img--single-pool-mobile" aria-hidden="true" />-->
+            <section class="intro">
+                <div class="intro__slider swiper">
+                    <ul class="intro__slider-wrapper swiper-wrapper">
+                        <li class="intro__slide swiper-slide">
+                            <img src="./images/navy-pool.jpg" alt="" class="intro__img">
+                            <p class="page__title page__title--inner-page">NAVY POOL</p>
                         </li>
-                        <li class="swiper-slide intro__slide">
+                        <li class="intro__slide swiper-slide">
                             <img src="./images/s1.jpg" alt="" class="intro__img">
-                            <p class="page__title">NAVY 2</p>
-                            <p class="page__subtitle">порт твого відпочинку</p>
+                            <p class="page__title page__title--inner-page">NAVY POOL</p>
                         </li>
-                        <li class="swiper-slide intro__slide">
+                        <li class="intro__slide swiper-slide">
                             <img src="./images/s2.jpg" alt="" class="intro__img">
-                            <p class="page__title">NAVY 3</p>
-                            <p class="page__subtitle">порт твого відпочинку</p>
+                            <p class="page__title page__title--inner-page">NAVY POOL</p>
                         </li>
                     </ul>
                     <div class="intro__slider-pagination swiper-pagination"></div>
                 </div>
             </section>
-            <div class="page__wrapper">
-                <section class="section about-us">
-                     <h2 class="section__title section__title--home-page about-us__title">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item"> <a href="/" class="breadcrumbs__link"> Головна </a>
+                </li>
+                <li class="breadcrumbs__item"> <a href="./pools.html" class="breadcrumbs__link">
 
-        Про нас
+                        Басейни
 
-    </h2>
-                    <figure class="about-us__description">
-                        <img src="./images/brand1.png" alt="" class="about-us__image" height="500">
-                        <figcaption class="about-us__text">
-                            <p>Порт відпочинку NAVY – стильний і мультифункціональний заміський комплекс
-                                для поціновувачів преміум-відпочинку. Це місце, яке поєднує в собі сучасний
-                                готель, чудовий ресторан, місткий NAVY EVENT HALL, великий літній концертний
-                                майданчик, басейни, дитяче містечко та причал для катерів.</p>
-                            <p>NAVY став улюбленим місцем відпочинку не лише для киян , але й жителів
-                                обласних міст. Тут знайдеться все, що тільки забажає душа досвідченого
-                                відпочивальника.</p>
+                    </a>
+                </li>
+                <li class="breadcrumbs__item"> <span class="breadcrumbs__link breadcrumbs__link--current">
+
+                        Navy pool
+
+                    </span>
+                </li>
+            </ul>
+            <section class="about-pool section">
+                 <h2 class="about-pool__title section__title">Navy pool</h2>
+                <div class="about-pool__description">
+                    <p class="about-pool__excerpt">На території комплексу розташовані 2 басейни з підігрівом. У літній
+                        період вода має комфортну температуру 26С.</p>
+                    <figure class="about-pool__img-wrapper">
+                        <img src="./images/single-pool.jpg" alt="" class="about-pool__img" width="684" height="643">
+                        <figcaption class="about-pool__order-block pool-order">
+                            <p class="pool-order__title">Забронювати шезлонг</p> <a href="#" class="btn btn--white pool-order__btn">
+
+                    ЗАБРОНЮВАТИ
+
+                </a>
                         </figcaption>
                     </figure>
-                </section>
-                <section class="section hotel">
-                     <h2 class="section__title section__title--home-page hotel__title">
-
-        Готель
-
-    </h2>
-                    <div class="swiper hotel__slider">
-                        <ul class="swiper-wrapper hotel__slider-wrapper">
-                            <li class="swiper-slide hotel__slider-item">
-                                <img src="./images/hotel-room-3.jpg" alt="" class="hotel__img">
-                                <div class="hotel__desc">
-                                    <p class="hotel__type">Standard room</p> <a href="#" class="hotel__booking"> ЗАБРОНЮВАТИ </a>
-                                </div>
-                            </li>
-                            <li class="swiper-slide hotel__slider-item">
-                                <img src="./images/hotel-room-1.jpg" alt="" class="hotel__img">
-                                <div class="hotel__desc">
-                                    <p class="hotel__type">Standard room</p> <a href="#" class="hotel__booking"> ЗАБРОНЮВАТИ </a>
-                                </div>
-                            </li>
-                            <li class="swiper-slide hotel__slider-item">
-                                <img src="./images/hotel-room-2.jpg" alt="" class="hotel__img">
-                                <div class="hotel__desc">
-                                    <p class="hotel__type">Standard room</p> <a href="#" class="hotel__booking"> ЗАБРОНЮВАТИ </a>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="hotel__nav-btn swiper-button-prev">
-                            <svg width="47" height="45" viewBox="0 0 47 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.878773 20.3787C-0.292801 21.5502 -0.292801 23.4497 0.878773 24.6213L19.9707 43.7132C21.1422 44.8848 23.0417 44.8848 24.2133 43.7132C25.3849 42.5416 25.3849 40.6421 24.2133 39.4706L7.24273 22.5L24.2133 5.52944C25.3849 4.35786 25.3849 2.45837 24.2133 1.28679C23.0417 0.115221 21.1422 0.115221 19.9707 1.28679L0.878773 20.3787ZM46.0117 19.5L3.00009 19.5L3.00009 25.5L46.0117 25.5L46.0117 19.5Z" fill="#FBFBFC"/>
-                            </svg>
-                        </div>
-                        <div class="hotel__nav-btn swiper-button-next">
-                            <svg width="47" height="45" viewBox="0 0 47 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M46.1701 24.0714C47.3141 22.8729 47.2699 20.974 46.0714 19.8299L26.5408 1.18709C25.3423 0.0430756 23.4434 0.0872375 22.2993 1.28573C21.1553 2.48423 21.1995 4.38321 22.398 5.52723L39.7585 22.0986L23.1871 39.4592C22.0431 40.6577 22.0872 42.5567 23.2857 43.7007C24.4842 44.8447 26.3832 44.8005 27.5272 43.602L46.1701 24.0714ZM1.06975 25.9992L44.0697 24.9992L43.9303 19.0008L0.930252 20.0008L1.06975 25.9992Z" fill="#FBFBFC"/>
-                            </svg>
-                        </div>
+                    <div class="about-pool__text">
+                        <p>Великий басейн має площу 375 кв. м та 4 рівні, на яких розташовані шезлонги
+                            та ліжка. Біля басейну можна затишно відпочити великою компанією друзів,
+                            з дітьми та усією сім’єю. Літній майданчик ресторану є вмістким: тут
+                            легко розмістити до 350 відпочивальників.</p>
+                        <p>Для зручності наявні великі роздягальні на 300 місць, які облаштовані
+                            надійною системою електронного захисту, наявні душові кабіни та окремі
+                            лаунж-зони. Кожен з відвідувачів має свою окрему шафу для речей з електронним
+                            замком, рушник і пляжну парасольку.</p>
+                        <p>У Navy ви стовідсотково забудете, що таке старі басейни з холодною водою,
+                            особливо, коли погода показує свої капризи.</p>
                     </div>
-                </section>
-                <section class="section contact">
-                     <h2 class="section__title section__title--home-page contact__title">
-
-        Контакти
-
-    </h2>
-                    <div class="contact__wrapper"> <a href="https://goo.gl/maps/3WQ54T3ksS3w5uGd7" class="contact__map" target="_blank">
-
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2533.287911314358!2d30.54465121550711!3d50.58460178557091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d5a82e12e33d%3A0xb5d88b14bc1dfb1b!2zTkFWWSDQv9C-0YDRgiDQstGW0LTQv9C-0YfQuNC90LrRgw!5e0!3m2!1suk!2sua!4v1675000761514!5m2!1suk!2sua" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
-
-            <p class="contact__map-subtitle">Як дістатися?</p>
-
-            <p class="contact__map-title">Карта</p>
-
-        </a> <address class="contact__address">
-
-            <p class="contact__text">
-
-                Київська область, Вишгородський р-н, с.Осещина, вул. Київська 2г
-
-            </p>
-
-
-
-            <p class="contact__address-title">Контакти</p>
-
-        </address>
-                    </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </main>
         <footer class="page-footer page__footer">
             <ul class="footer-menu page-footer__menu">
