@@ -1,0 +1,135 @@
+.about-pool {
+}
+
+.about-pool__description {
+    padding-left: $section-padding-left;
+    padding-right: $section-padding-right;
+
+    margin-top: 40px;
+    margin-bottom: 200px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10.4vw;
+    row-gap: 7.9vw;
+
+    @include mq(1200) {
+        padding-left: $section-padding-left--1200;
+        padding-right: $section-padding-right--1200;
+    }
+    @include mq(880) {
+        grid-template-columns: 1fr;
+        margin-bottom: 0;
+    }
+    @include mq(640) {
+        padding-left: $section-padding-left--640;
+        padding-right: $section-padding-right--640;
+    }
+}
+
+.about-pool__excerpt {
+    grid-column: span 2;
+    max-width: 50%;
+
+    font-weight: 300;
+    @include fz(32, 12);
+    line-height: 1.2;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @include mq(880) {
+        grid-column: span 1;
+        max-width: 100%;
+    }
+}
+
+.about-pool__img-wrapper {
+    margin: 0;
+    position: relative;
+
+    @include mq(880) {
+        margin-bottom: 100px;
+    }
+}
+
+.about-pool__img {
+    box-shadow: 0px 12px 10px rgba(16, 36, 58, 0.4);
+    border-radius: 40px;
+    object-fit: cover;
+
+    @include mq(1360) {
+        height: 500px;
+    }
+    @include mq(880) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include mq(640) {
+        height: 216px;
+    }
+}
+
+.about-pool__order-block {
+    position: absolute;
+    left: 40%;
+    top: calc(100% - 80px);
+    background-color: $main-color;
+    border-radius: 40px;
+    padding: 38px 33px 45px;
+    color: #fff;
+
+    @include mq(1200) {
+        padding: 28px 24px 32px;
+        left: 30%;
+    }
+    @include mq(992) {
+        padding: 18px 24px;
+        left: 10%;
+    }
+    @include mq(880) {
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(100% - 40px);
+    }
+    @include mq(640) {
+        padding: 14px 16px;
+        border-radius: 20px;
+        max-width: 220px;
+    }
+}
+
+.pool-order__title {
+    font-style: italic;
+    font-weight: 400;
+    @include fz(28, 12);
+    line-height: 131%;
+    color: #fbfbfc;
+    margin: 0;
+}
+
+.pool-order__btn {
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(576) {
+        min-width: 180px;
+        margin-top: 20px;
+    }
+}
+
+.about-pool__text {
+    align-self: center;
+    font-weight: 500;
+    @include fz(24, 14);
+    line-height: 1.14;
+
+    @include mq(640) {
+        line-height: 140%;
+    }
+
+    & p {
+        margin: 0;
+    }
+}

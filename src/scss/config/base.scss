@@ -8,7 +8,7 @@
 }
 
 .page__body {
-    font-family: "Eastman", sans-serif;
+    font-family: 'Eastman', sans-serif;
     color: $main-color;
     background-color: #fbfbfc;
 
@@ -17,16 +17,73 @@
     }
 }
 
-.page__wrapper {
+.page__main {
     position: relative;
-    background-image: url(../images/main-decor.png);
-    background-size: 100% calc(100% - 80vw);
-    background-repeat: no-repeat;
-    background-position: top 70vw left;
+}
 
-    // &--inner {
-    //     background: none;
-    // }
+.decor-img {
+    position: absolute;
+    left: 0;
+    top: 100vh;
+    width: 100%;
+    // height: 100%;
+    object-fit: contain;
+
+    &--single-pool {
+        top: 130vh;
+
+        @include mq(880) {
+            display: none;
+        }
+    }
+    &--single-pool-mobile {
+        display: none;
+
+        @include mq(880) {
+            top: 130vh;
+
+            display: block;
+            // object-fit: scale-down;
+        }
+    }
+}
+
+.page__title {
+    font-weight: 300;
+    @include fz(160, 80);
+    line-height: 100%;
+    color: #fbfbfc;
+    text-transform: uppercase;
+    text-shadow: 0px 8px 6px rgba(0, 0, 0, 0.5);
+
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    position: relative;
+    z-index: 3;
+
+    &--inner-page {
+        @include fz(160, 50);
+        text-align: center;
+    }
+
+    &--rooms {
+        @include fz(160, 50);
+        width: min-content;
+    }
+}
+
+.page__subtitle {
+    font-weight: 300;
+    @include fz(60, 20);
+    line-height: 100%;
+    color: #fbfbfc;
+
+    text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.5);
+
+    margin: 0;
+    position: relative;
+    z-index: 3;
 }
 
 .section__title {
@@ -48,7 +105,7 @@
 
     &--home-page {
         &::before {
-            content: "Navy";
+            content: 'Navy';
             display: block;
             margin-bottom: 10px;
             font-weight: 400;
@@ -59,14 +116,13 @@
     }
 }
 
-.order-btn {
-    display: block;
-    max-width: 320px;
+.btn {
     padding: 20px 48px;
     border: 1px solid #000000;
     border-radius: 40px;
-
-    margin-top: 56px;
+    display: block;
+    width: max-content;
+    min-width: 260px;
 
     font-weight: 300;
     @include fz(24, 12);
@@ -75,6 +131,19 @@
     color: $main-color;
 
     transition: color 0.5s, background-color 0.5s;
+
+    margin-top: 60px;
+
+    @include mq(1360) {
+        padding: 16px 40px;
+    }
+    @include mq(1200) {
+        padding: 14px 32px;
+        max-width: 300px;
+    }
+    @include mq(768) {
+        max-width: 260px;
+    }
 
     &:hover {
         color: #ffffff;
@@ -91,17 +160,14 @@
             background-color: #fff;
         }
     }
+}
 
-    @include mq(1360) {
-        padding: 16px 40px;
-    }
-    @include mq(1200) {
-        padding: 14px 32px;
-        max-width: 300px;
-    }
-    @include mq(768) {
-        max-width: 260px;
-    }
+.menu-btn {
+    @extend .btn;
+}
+
+.order-btn {
+    @extend .btn;
 }
 
 .entity-types {

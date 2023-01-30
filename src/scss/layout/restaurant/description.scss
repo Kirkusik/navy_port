@@ -1,0 +1,139 @@
+.restaurant-description {
+}
+
+.restaurant-description__title {
+    margin-bottom: 120px;
+    margin-top: 45px;
+
+    @include mq(1200) {
+        margin-bottom: 80px;
+    }
+    @include mq(992) {
+        margin-bottom: 40px;
+    }
+    @include mq(880) {
+        margin-bottom: 24px;
+    }
+}
+
+.restaurant-description__block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+
+    padding-left: $section-padding-left;
+    padding-right: $section-padding-right;
+
+    @include mq(1200) {
+        padding-left: $section-padding-left--1200;
+        padding-right: $section-padding-right--1200;
+    }
+    @include mq(640) {
+        padding-left: $section-padding-left--640;
+        padding-right: $section-padding-right--640;
+    }
+
+    @include mq(880) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.restaurant-description__img-1 {
+    order: 1;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(880) {
+        margin-top: 60px;
+        margin-bottom: 46px;
+    }
+}
+
+.restaurant-description__img-2 {
+    order: 3;
+
+    @include mq(880) {
+        order: 4;
+    }
+}
+
+.restaurant-description__text--about-rest {
+    order: 2;
+    padding-left: 7.5vw;
+
+    @include mq(880) {
+        order: -1;
+        padding-left: 0;
+    }
+}
+
+.order-table {
+    order: 4;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(880) {
+        order: 3;
+        margin-top: 0;
+    }
+}
+
+.restaurant-description__images-wrapper {
+    order: 6;
+    display: grid;
+    justify-items: end;
+}
+
+.restaurant-description__menu-wrapper {
+    order: 5;
+    padding-right: 7.5vw;
+
+    @include mq(880) {
+        padding-right: 0;
+    }
+}
+
+.restaurant-description__img {
+    box-shadow: 0px 12px 10px rgba(16, 36, 58, 0.4);
+    border-radius: 40px;
+    object-fit: cover;
+    height: auto;
+
+    &--centered {
+        margin: -80px auto 130px;
+        max-width: 70%;
+
+        @include mq(1200) {
+            height: 300px;
+            object-position: top center;
+            margin-bottom: 80px;
+            margin-top: -120px;
+        }
+        @include mq(992) {
+            margin-top: -200px;
+        }
+        @include mq(880) {
+            margin-top: 55px;
+            margin-left: 0;
+            margin-bottom: 0;
+            width: 56%;
+            height: auto;
+        }
+    }
+
+    &--right {
+        margin-left: auto;
+        margin-top: -80px;
+        max-width: 70%;
+    }
+}
+
+.restaurant-description__text {
+    font-weight: 300;
+    @include fz(32, 14);
+    line-height: 150%;
+}
+
+.restaurant-description__text--last {
+    margin-top: 130px;
+}
