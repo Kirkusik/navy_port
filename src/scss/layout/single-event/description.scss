@@ -1,0 +1,210 @@
+.single-event__main-order {
+    margin: 100px auto;
+}
+
+.single-event__description {
+    margin-left: $section-padding-left;
+    margin-right: $section-padding-right;
+    padding-right: 11.5vw;
+
+    @include mq(1200) {
+        margin-left: $section-padding-left--1200;
+        margin-right: $section-padding-right--1200;
+    }
+    @include mq(768) {
+        margin-left: $section-padding-left--768;
+        margin-right: $section-padding-right--768;
+    }
+
+    & p {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 124%;
+        color: #000000;
+        margin-top: 0;
+
+        &:not(:last-child) {
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.single-event__lications-title {
+    font-size: 56px;
+    line-height: 1;
+    text-align: center;
+
+    color: #000000;
+
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+
+.single-event__lications {
+    padding-left: 0;
+    list-style-type: none;
+    margin-left: $section-padding-left;
+    margin-right: $section-padding-right;
+
+    @include mq(1200) {
+        margin-left: $section-padding-left--1200;
+        margin-right: $section-padding-right--1200;
+    }
+    @include mq(768) {
+        margin-left: $section-padding-left--768;
+        margin-right: $section-padding-right--768;
+    }
+}
+
+.event-location {
+    display: grid;
+
+    align-items: start;
+    column-gap: 8.6vw;
+    margin-bottom: 280px;
+
+    position: relative;
+
+    &:nth-child(odd) {
+        grid-template-columns: 400px 1fr;
+
+        & .event-location__params {
+            right: calc(100% + 8.6vw);
+        }
+
+        & .event-location__order {
+            left: 0;
+        }
+    }
+
+    &:nth-child(even) {
+        grid-template-columns: 1fr 400px;
+
+        & .event-location__description {
+            order: -1;
+        }
+
+        & .event-location__params {
+            left: calc(100% + 8.6vw);
+        }
+
+        & .event-location__order {
+            right: 0;
+        }
+    }
+}
+
+.event-location__slider {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.event-location__slider-wrapper {
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.event-location__description {
+    align-self: center;
+    background-color: $main-color;
+    border-radius: 40px;
+    padding: 45px;
+    color: #fff;
+
+    position: relative;
+}
+
+.event-location__title {
+    font-size: 28px;
+    line-height: 164%;
+    margin-top: 0;
+    margin-bottom: 26px;
+}
+
+.event-location__text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 164%;
+
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.event-location__excerpt {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 164%;
+}
+
+.event-location__params {
+    position: absolute;
+
+    top: 465px;
+
+    border: 1px solid #10243a;
+    border-radius: 40px;
+    padding: 50px;
+    width: 400px;
+    min-height: 300px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 164%;
+    color: $main-color;
+    text-align: center;
+
+    display: grid;
+    align-content: center;
+}
+
+.event-location__param {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.event-location__order {
+    position: absolute;
+    top: calc(100% + 80px);
+    margin-top: 0;
+}
+
+.single-event__slider-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: $main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    position: absolute;
+    top: 200px;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    &.swiper-button-prev {
+        right: 20px;
+    }
+    &.swiper-button-next {
+        left: 20px;
+    }
+}
+
+.event-location__img-link {
+    position: relative;
+    display: flex;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-image: url(../images/loupe.png);
+        background-size: 79px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

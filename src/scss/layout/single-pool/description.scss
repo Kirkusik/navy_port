@@ -21,9 +21,9 @@
         grid-template-columns: 1fr;
         margin-bottom: 0;
     }
-    @include mq(640) {
-        padding-left: $section-padding-left--640;
-        padding-right: $section-padding-right--640;
+    @include mq(768) {
+        padding-left: $section-padding-left--768;
+        padding-right: $section-padding-right--768;
     }
 }
 

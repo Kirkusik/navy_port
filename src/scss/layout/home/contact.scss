@@ -25,11 +25,11 @@
     }
     @include mq(768) {
         margin-top: 60px;
+        padding-left: $section-padding-left--768;
+        padding-right: $section-padding-right--768;
     }
     @include mq(640) {
         margin-top: 24px;
-        padding-left: $section-padding-left--640;
-        padding-right: $section-padding-right--640;
     }
 }
 
@@ -55,7 +55,7 @@
     }
 
     &::after {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         right: 0;

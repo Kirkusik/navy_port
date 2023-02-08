@@ -6,9 +6,9 @@
         padding-left: $section-padding-left--1200;
         padding-right: $section-padding-right--1200;
     }
-    @include mq(640) {
-        padding-left: $section-padding-left--640;
-        padding-right: $section-padding-right--640;
+    @include mq(768) {
+        padding-left: $section-padding-left--768;
+        padding-right: $section-padding-right--768;
     }
     list-style-type: none;
     margin: 40px 0 0;
@@ -27,7 +27,7 @@
 
     &:not(:first-child) {
         &::before {
-            content: "";
+            content: '';
             width: 24px;
             border: 2px solid #bcc0c8;
             margin-left: 18px;
@@ -46,7 +46,7 @@
     font-size: 22px;
     line-height: 29px;
     color: rgba(16, 36, 58, 0.5);
-text-transform: capitalize;
+    text-transform: capitalize;
 
     &--current {
         color: rgba(16, 36, 58, 0.8);

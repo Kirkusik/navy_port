@@ -8,3 +8,6 @@
 -   [VIP Room TerRace](https://kirkusik.github.io/navy_port/vip-room-terrace.html)
 -   [БАСЕЙНИ](https://kirkusik.github.io/navy_port/pools.html)
 -   [Navy pool](https://kirkusik.github.io/navy_port/single-pool.html)
+-   [Контакти](https://kirkusik.github.io/navy_port/contacts.html)
+-   [Галерея](https://kirkusik.github.io/navy_port/gallery.html)
+-   [Афіши](https://kirkusik.github.io/navy_port/posters.html)

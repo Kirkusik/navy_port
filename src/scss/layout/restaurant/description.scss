@@ -28,13 +28,12 @@
         padding-left: $section-padding-left--1200;
         padding-right: $section-padding-right--1200;
     }
-    @include mq(640) {
-        padding-left: $section-padding-left--640;
-        padding-right: $section-padding-right--640;
-    }
-
     @include mq(880) {
         grid-template-columns: 1fr;
+    }
+    @include mq(768) {
+        padding-left: $section-padding-left--768;
+        padding-right: $section-padding-right--768;
     }
 }
 

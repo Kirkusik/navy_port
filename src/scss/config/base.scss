@@ -98,9 +98,9 @@
         padding-left: $section-padding-left--1200;
         padding-right: $section-padding-right--1200;
     }
-    @include mq(640) {
-        padding-left: $section-padding-left--640;
-        padding-right: $section-padding-right--640;
+    @include mq(768) {
+        padding-left: $section-padding-left--768;
+        padding-right: $section-padding-right--768;
     }
 
     &--home-page {
@@ -178,9 +178,9 @@
         padding-left: $section-padding-left--1200;
         padding-right: $section-padding-right--1200;
     }
-    @include mq(640) {
-        padding-left: $section-padding-left--640;
-        padding-right: $section-padding-right--640;
+    @include mq(768) {
+        padding-left: $section-padding-left--768;
+        padding-right: $section-padding-right--768;
     }
 
     width: 1130px;
@@ -191,6 +191,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 18px;
+
+    &--events {
+        width: 100%;
+    }
 
     @include mq(1360) {
         width: 100%;

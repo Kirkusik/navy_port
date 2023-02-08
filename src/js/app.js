@@ -1,23 +1,23 @@
-import { isWebp, headerFixed } from "./modules";
-import createHomeHotelSlider from "./modules/home-hotel-slider";
+import { isWebp, headerFixed } from './modules';
+import createHomeHotelSlider from './modules/home-hotel-slider';
 import Swiper, {
     Navigation,
     Pagination,
     Autoplay,
     Lazy,
     EffectFade,
-} from "swiper";
+} from 'swiper';
 
 Swiper.use([Navigation, Pagination, Autoplay, Lazy, EffectFade]);
 
-import createHomeIntroSlider from "./modules/home-intro-slider";
-import menuHaandler from "./modules/menu-handler";
-import createRoomsSlider from "./modules/rooms-slider";
-/* Раскомментировать для использования */
-// import { MousePRLX } from './libs/parallaxMouse'
+import createHomeIntroSlider from './modules/home-intro-slider';
+import menuHaandler from './modules/menu-handler';
+import createRoomsSlider from './modules/rooms-slider';
+import createSingleEventSlider from './modules/single-event-slider';
+import 'fslightbox';
 
 /* Раскомментировать для использования */
-// import Swiper, { Navigation, Pagination } from 'swiper'
+// import { MousePRLX } from './libs/parallaxMouse'
 
 // Проверка браузера на поддерку .webp изображений ====================================================================================================================================================
 isWebp();
@@ -30,12 +30,14 @@ isWebp();
 // Фиксированный header ====================================================================================================================================================
 // headerFixed()
 // ====================================================================================================================================================
-document.addEventListener("DOMContentLoaded", function (evt) {
+document.addEventListener('DOMContentLoaded', function (evt) {
+    menuHaandler();
+
     createHomeHotelSlider(Swiper);
 
     createHomeIntroSlider(Swiper);
 
     createRoomsSlider(Swiper);
 
-    menuHaandler();
+    createSingleEventSlider(Swiper);
 });

@@ -1,0 +1,29 @@
+.contact-gallery {
+    padding-left: $section-padding-left;
+    padding-right: $section-padding-right;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include mq(1200) {
+        padding-left: $section-padding-left--1200;
+        padding-right: $section-padding-right--1200;
+    }
+    @include mq(768) {
+        padding-left: $section-padding-left--768;
+        padding-right: $section-padding-right--768;
+    }
+}
+
+.contact-gallery__title {
+    font-weight: 600;
+    @include fz(40, 18);
+    line-height: 120%;
+
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 90px;
+
+    @include mq(768) {
+        margin-bottom: 50px;
+    }
+}

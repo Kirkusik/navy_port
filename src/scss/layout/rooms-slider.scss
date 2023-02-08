@@ -68,21 +68,75 @@
     }
 }
 
+.rooms-slider__nav-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: rgba(16, 36, 58, 0.3);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $main-color;
+    }
+
+    @include mq(576) {
+        background-color: $main-color;
+    }
+
+    & svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    &.swiper-button-prev {
+        left: 20px;
+
+        @include mq(576) {
+            left: 0;
+        }
+    }
+    &.swiper-button-next {
+        right: 20px;
+
+        @include mq(576) {
+            right: 0;
+        }
+    }
+}
+
 .rooms-slider__link {
     display: flex;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(16, 36, 58, 0.3);
+    }
 }
 
 .rooms-slider__img {
     width: 100%;
     object-fit: cover;
+    aspect-ratio: 16/10;
+    // height: auto;
 
-    @include mq(1360) {
-        height: 350px;
+    @include mq(992) {
+        height: 260px;
     }
     @include mq(768) {
-        height: 280px;
-    }
-    @include mq(640) {
-        height: 100px;
+        height: 200px;
     }
 }

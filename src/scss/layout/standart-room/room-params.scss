@@ -42,7 +42,7 @@
     }
     @include mq(768) {
         height: auto;
-        width: calc(100% - $section-padding-right--640 * 2);
+        width: calc(100% - $section-padding-right--768 * 2);
     }
 }
 
@@ -62,10 +62,7 @@
     }
     @include mq(768) {
         margin-top: 40px;
-    }
-
-    @include mq(640) {
-        margin-left: $section-padding-left--640;
+        margin-left: $section-padding-left--768;
     }
 }
 
@@ -94,9 +91,11 @@
         row-gap: 30px;
         margin-bottom: 50px;
     }
+    @include mq(768) {
+        margin-left: $section-padding-left--768;
+        margin-right: $section-padding-right--768;
+    }
     @include mq(640) {
-        margin-left: $section-padding-left--640;
-        margin-right: $section-padding-right--640;
         row-gap: 20px;
     }
 }
@@ -174,10 +173,12 @@
         margin-top: 80px;
         padding-bottom: 0;
     }
+    @include mq(768) {
+        padding-left: $section-padding-left--768;
+        padding-right: $section-padding-right--768;
+    }
     @include mq(640) {
         margin-top: 60px;
-        padding-left: $section-padding-left--640;
-        padding-right: $section-padding-right--640;
     }
 
     @include mq(576) {
@@ -229,9 +230,6 @@
         }
 
         @include mq(640) {
-            margin-left: $section-padding-left--640;
-            margin-right: $section-padding-right--640;
-
             height: 230px;
         }
     }
@@ -247,9 +245,11 @@
             width: auto;
             justify-self: center;
         }
+        @include mq(768) {
+            margin-left: $section-padding-left--768;
+            margin-right: $section-padding-right--768;
+        }
         @include mq(640) {
-            margin-left: $section-padding-left--640;
-            margin-right: $section-padding-right--640;
             width: 216px;
             height: 291px;
         }

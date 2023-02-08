@@ -17,6 +17,7 @@
 @import './config/base';
 
 @import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/swiper/modules/effect-fade/effect-fade.scss';
 
 // Подключение стилей отдельных блоков и секций =======================================================================================================================
 @import './layout/header';
@@ -44,6 +45,23 @@
 
 // SINGLE POOL PAGE STYLES
 @import './layout/single-pool/description';
+
+// EVENTS PAGE STYLES
+@import './layout/events/description';
+
+// SINGLE EVENT PAGE
+@import './layout/single-event/description';
+
+// CONTACT PAGE STYLES
+@import './layout/contacts/data';
+@import './layout/contacts/how-to-reach';
+@import './layout/contacts/contacts-gallery';
+
+// GALLERY PAGE STYLES
+@import './layout/gallery/gallery';
+
+// POSTERS PAGE STYLES
+@import './layout/posters/posters';
 
 @import './layout/rooms-slider';
 @import './layout/footer';
