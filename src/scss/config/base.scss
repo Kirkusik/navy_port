@@ -127,6 +127,7 @@
     display: block;
     width: 100%;
     min-width: max-content;
+    max-width: 360px;
 
     font-weight: 300;
     @include fz(24, 12);

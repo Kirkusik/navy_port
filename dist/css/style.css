@@ -569,6 +569,7 @@ template {
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
+  max-width: 360px;
   font-weight: 300;
   font-size: calc(
         12px + (24 - 12) * (100vw - 320px) /
