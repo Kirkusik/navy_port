@@ -138,6 +138,7 @@
     }
     @include mq(640) {
         max-width: calc(100% - 50px);
+        padding: 14px 16px;
     }
     @include mq(480) {
         max-width: calc(100% - 30px);
@@ -161,7 +162,7 @@
 .event__text {
     font-weight: 300;
     @include fz(24, 12);
-    line-height: 114%;
+    line-height: 125%;
     margin: 0;
 }
 

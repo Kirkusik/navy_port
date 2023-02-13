@@ -50,7 +50,7 @@
 
 .page__title {
     font-weight: 300;
-    @include fz(160, 80);
+    @include fz(160, 60);
     line-height: 100%;
     color: #fbfbfc;
     text-transform: uppercase;
@@ -65,13 +65,15 @@
     z-index: 3;
 
     &--inner-page {
-        @include fz(160, 50);
+        @include fz(160, 46);
         text-align: center;
     }
 
     &--rooms {
         @include fz(160, 50);
         width: min-content;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -123,8 +125,8 @@
     border: 1px solid #000000;
     border-radius: 40px;
     display: block;
-    width: max-content;
-    min-width: 260px;
+    width: 100%;
+    min-width: max-content;
 
     font-weight: 300;
     @include fz(24, 12);

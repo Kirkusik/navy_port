@@ -1,5 +1,14 @@
 .single-event__main-order {
     margin: 100px auto;
+
+    @include mq(1200) {
+        margin-top: 80px;
+        margin-bottom: 60px;
+    }
+    @include mq(768) {
+        margin-top: 53px;
+        margin-bottom: 30px;
+    }
 }
 
 .single-event__description {
@@ -25,6 +34,13 @@
 
         &:not(:last-child) {
             margin-bottom: 60px;
+
+            @include mq(1200) {
+                margin-bottom: 40px;
+            }
+            @include mq(768) {
+                margin-bottom: 20px;
+            }
         }
     }
 }

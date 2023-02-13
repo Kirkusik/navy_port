@@ -20,7 +20,7 @@
     column-gap: 107px;
 
     @include mq(1200) {
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
     }
 }
 

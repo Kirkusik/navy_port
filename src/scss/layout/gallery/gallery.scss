@@ -23,7 +23,7 @@
 
 .gallery-slides__title {
     font-weight: 600;
-    font-size: 40px;
+    @include fz(40, 16);
     line-height: 120%;
 
     text-align: center;
