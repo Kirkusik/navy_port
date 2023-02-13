@@ -496,6 +496,7 @@ template {
   color: #fbfbfc;
   text-transform: uppercase;
   text-shadow: 0px 8px 6px rgba(0, 0, 0, 0.5);
+  word-wrap: break-word;
   margin-top: 0;
   margin-bottom: 20px;
   position: relative;
@@ -2539,7 +2540,6 @@ template {
   color: #fff;
   padding: 0;
   text-align: left;
-  width: auto;
   min-height: auto;
 }
 
@@ -4463,7 +4463,10 @@ template {
   }
 
   .event-location__params--mobile {
+    width: auto;
+    min-height: auto;
     display: block;
+    border: none;
   }
 
   .event-location__order {

@@ -285,11 +285,13 @@
         color: #fff;
         padding: 0;
         text-align: left;
-        width: auto;
         min-height: auto;
 
         @include mq(768) {
+            width: auto;
+            min-height: auto;
             display: block;
+            border: none;
         }
     }
 }
