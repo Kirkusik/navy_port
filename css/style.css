@@ -489,7 +489,7 @@ template {
 .page__title {
   font-weight: 300;
   font-size: calc(
-        80px + (160 - 80) * (100vw - 320px) /
+        60px + (160 - 60) * (100vw - 320px) /
             (1920 - 320)
     );
   line-height: 100%;
@@ -505,7 +505,7 @@ template {
 
 .page__title--inner-page {
   font-size: calc(
-        50px + (160 - 50) * (100vw - 320px) /
+        46px + (160 - 46) * (100vw - 320px) /
             (1920 - 320)
     );
   text-align: center;
@@ -519,6 +519,8 @@ template {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .page__subtitle {
@@ -563,10 +565,10 @@ template {
   border: 1px solid #000000;
   border-radius: 40px;
   display: block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  min-width: 260px;
+  width: 100%;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
   font-weight: 300;
   font-size: calc(
         12px + (24 - 12) * (100vw - 320px) /
@@ -2304,7 +2306,7 @@ template {
         12px + (24 - 12) * (100vw - 320px) /
             (1920 - 320)
     );
-  line-height: 114%;
+  line-height: 125%;
   margin: 0;
 }
 
@@ -2774,7 +2776,10 @@ template {
 
 .gallery-slides__title {
   font-weight: 600;
-  font-size: 40px;
+  font-size: calc(
+        16px + (40 - 16) * (100vw - 320px) /
+            (1920 - 320)
+    );
   line-height: 120%;
   text-align: center;
   color: #000000;
@@ -3430,8 +3435,8 @@ template {
   }
 
   .room-data {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
   }
 
   .room-data__img {
@@ -3578,9 +3583,18 @@ template {
     height: 400px;
   }
 
+  .single-event__main-order {
+    margin-top: 80px;
+    margin-bottom: 60px;
+  }
+
   .single-event__description {
     margin-left: 66px;
     margin-right: 66px;
+  }
+
+  .single-event__description p:not(:last-child) {
+    margin-bottom: 40px;
   }
 
   .single-event__lications {
@@ -4405,9 +4419,18 @@ template {
     margin-right: auto;
   }
 
+  .single-event__main-order {
+    margin-top: 53px;
+    margin-bottom: 30px;
+  }
+
   .single-event__description {
     margin-left: 30px;
     margin-right: 30px;
+  }
+
+  .single-event__description p:not(:last-child) {
+    margin-bottom: 20px;
   }
 
   .single-event__lications {
@@ -4674,6 +4697,7 @@ template {
 
   .event__description {
     max-width: calc(100% - 50px);
+    padding: 14px 16px;
   }
 
   .contacts-data__wrapper {
