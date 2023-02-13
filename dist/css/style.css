@@ -4467,6 +4467,7 @@ template {
     min-height: auto;
     display: block;
     border: none;
+    padding: 0;
   }
 
   .event-location__order {
