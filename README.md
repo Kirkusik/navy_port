@@ -2,6 +2,7 @@
 
 -   [Головна](https://kirkusik.github.io/navy_port/)
 -   [ГОТЕЛЬ](https://kirkusik.github.io/navy_port/hotel.html)
+-   [РЕСТОРАН](https://kirkusik.github.io/navy_port/)
 -   [Standart Room](https://kirkusik.github.io/navy_port/standart-room.html)
 -   [Standart Room TerRace](https://kirkusik.github.io/navy_port/standart-room-terrace.html)
 -   [VIP ROOM](https://kirkusik.github.io/navy_port/vip-room.html)

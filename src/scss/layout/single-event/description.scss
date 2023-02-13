@@ -18,7 +18,7 @@
 
     & p {
         font-weight: 300;
-        font-size: 24px;
+        @include fz(24, 12);
         line-height: 124%;
         color: #000000;
         margin-top: 0;
@@ -30,8 +30,8 @@
 }
 
 .single-event__lications-title {
-    font-size: 56px;
-    line-height: 1;
+    @include fz(56, 18);
+    line-height: 1.25;
     text-align: center;
 
     color: #000000;
@@ -61,15 +61,25 @@
 
     align-items: start;
     column-gap: 8.6vw;
-    margin-bottom: 280px;
-
+    margin-bottom: 140px;
     position: relative;
+
+    @include mq(1360) {
+        column-gap: 60px;
+    }
+    @include mq(1200) {
+        column-gap: 40px;
+    }
 
     &:nth-child(odd) {
         grid-template-columns: 400px 1fr;
 
+        @include mq(1200) {
+            grid-template-columns: 300px 1fr;
+        }
+
         & .event-location__params {
-            right: calc(100% + 8.6vw);
+            left: 0;
         }
 
         & .event-location__order {
@@ -80,16 +90,26 @@
     &:nth-child(even) {
         grid-template-columns: 1fr 400px;
 
+        @include mq(1200) {
+            grid-template-columns: 1fr 300px;
+        }
+
         & .event-location__description {
             order: -1;
         }
 
         & .event-location__params {
-            left: calc(100% + 8.6vw);
+            right: 0;
         }
 
         & .event-location__order {
             right: 0;
+        }
+    }
+
+    @include mq(768) {
+        &:nth-child(n) {
+            grid-template-columns: 1fr;
         }
     }
 }
@@ -97,6 +117,15 @@
 .event-location__slider {
     max-width: 100%;
     overflow: hidden;
+    padding-bottom: 400px;
+
+    @include mq(1360) {
+        padding-bottom: 320px;
+    }
+    @include mq(768) {
+        order: -1;
+        padding-bottom: 0;
+    }
 }
 
 .event-location__slider-wrapper {
@@ -105,18 +134,99 @@
     list-style-type: none;
 }
 
+.event-location__img-link {
+    position: relative;
+    display: flex;
+
+    @include mq(768) {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include mq(576) {
+        max-width: 100%;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-image: url(../images/loupe.png);
+        background-size: 79px;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include mq(768) {
+            background-size: 60px;
+        }
+
+        @include mq(576) {
+            background-size: 45px;
+        }
+    }
+}
+
+.event-location__slider-img {
+    border-radius: 40px;
+    object-fit: cover;
+
+    @include mq(1200) {
+        height: 300px;
+    }
+    @include mq(768) {
+        width: 100%;
+    }
+}
+
 .event-location__description {
     align-self: center;
+    color: #fff;
+    position: relative;
+
+    @include mq(768) {
+        background-color: $main-color;
+        border-radius: 20px;
+
+        padding: 20px 24px;
+        margin-top: -30px;
+        z-index: 1;
+
+        max-width: calc(80% - 40px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include mq(576) {
+        padding: 14px 16px;
+        max-width: calc(100% - 40px);
+    }
+}
+
+.event-location__description-wrapper {
     background-color: $main-color;
     border-radius: 40px;
-    padding: 45px;
-    color: #fff;
 
-    position: relative;
+    padding: 45px;
+    margin-bottom: 60px;
+
+    @include mq(1360) {
+        padding: 40px;
+    }
+    @include mq(1200) {
+        padding: 32px;
+    }
+    @include mq(768) {
+        background-color: transparent;
+        border-radius: 0;
+
+        padding: 0;
+    }
 }
 
 .event-location__title {
-    font-size: 28px;
+    @include fz(28, 14);
     line-height: 164%;
     margin-top: 0;
     margin-bottom: 26px;
@@ -124,7 +234,7 @@
 
 .event-location__text {
     font-weight: 300;
-    font-size: 20px;
+    @include fz(20, 12);
     line-height: 164%;
 
     margin-top: 0;
@@ -133,28 +243,55 @@
 
 .event-location__excerpt {
     font-weight: 600;
-    font-size: 24px;
+    @include fz(24, 12);
     line-height: 164%;
 }
 
 .event-location__params {
     position: absolute;
-
     top: 465px;
-
-    border: 1px solid #10243a;
+    z-index: 1;
+    border: 1px solid $main-color;
     border-radius: 40px;
     padding: 50px;
     width: 400px;
     min-height: 300px;
+
     font-weight: 600;
-    font-size: 24px;
+    @include fz(24, 10);
     line-height: 164%;
     color: $main-color;
     text-align: center;
 
     display: grid;
     align-content: center;
+
+    @include mq(1360) {
+        padding: 40px;
+        min-height: 240px;
+    }
+    @include mq(1200) {
+        top: 365px;
+        width: 300px;
+        padding: 32px;
+    }
+    @include mq(768) {
+        display: none;
+    }
+
+    &--mobile {
+        display: none;
+        position: static;
+        color: #fff;
+        padding: 0;
+        text-align: left;
+        width: auto;
+        min-height: auto;
+
+        @include mq(768) {
+            display: block;
+        }
+    }
 }
 
 .event-location__param {
@@ -163,9 +300,28 @@
 }
 
 .event-location__order {
-    position: absolute;
-    top: calc(100% + 80px);
     margin-top: 0;
+
+    @include mq(768) {
+        color: #fff;
+        border-color: #fff;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 32px;
+
+        &:hover {
+            border-color: #fff;
+            background-color: #fff;
+            color: $main-color;
+        }
+    }
+
+    @include mq(576) {
+        min-width: 200px;
+    }
+    @include mq(360) {
+        min-width: max-content;
+    }
 }
 
 .single-event__slider-btn {
@@ -183,28 +339,14 @@
     transform: translateY(-50%);
     z-index: 2;
 
+    @include mq(768) {
+        top: 150px;
+    }
+
     &.swiper-button-prev {
         right: 20px;
     }
     &.swiper-button-next {
         left: 20px;
-    }
-}
-
-.event-location__img-link {
-    position: relative;
-    display: flex;
-
-    &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background-image: url(../images/loupe.png);
-        background-size: 79px;
-        background-repeat: no-repeat;
-        background-position: center;
     }
 }
