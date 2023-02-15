@@ -159,7 +159,6 @@
     list-style-type: none;
     // overflow: hidden;
     display: grid;
-    row-gap: 18px;
 
     position: relative;
 }
@@ -180,6 +179,7 @@
     line-height: 1.4;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.5);
+    padding-bottom: 18px;
 }
 
 .main-menu__item:hover .main-menu__link {
@@ -189,12 +189,13 @@
 
 .main-menu__sublist {
     display: none;
+    padding-left: 80px;
 }
 
 .main-menu__item:hover .main-menu__sublist {
     display: block;
     position: absolute;
-    left: 50%;
+    left: calc(50% - 40px);
     top: 0;
     width: 50%;
 
