@@ -11,9 +11,59 @@
     font-family: 'Eastman', sans-serif;
     color: $main-color;
     background-color: #fbfbfc;
+    background-repeat: no-repeat;
 
     &--w-popup {
         overflow: hidden;
+    }
+
+    &--home {
+        background-image: url(../images/decor/home-desktop.svg);
+        // background-size: 100%;
+        background-position: top 600px left -200px;
+
+        @include mq(768) {
+            background-image: url(../images/decor/home-mobile.svg);
+            background-size: 797px;
+            background-position: top 85vh left -40px;
+        }
+    }
+
+    &--hotel {
+        background-image: url(../images/decor/hotel-desktop.svg);
+        // background-size: contain;
+        background-position: top 200vh center;
+
+        @include mq(768) {
+            background-image: url(../images/decor/hotel-mobile.svg);
+            background-position: top 93vh left -60px;
+            background-size: auto 2000px;
+        }
+    }
+
+    &--room {
+        background-image: url(../images/decor/hotel-desktop.svg);
+        // background-size: contain;
+        background-position: top 120vh center;
+
+        @include mq(768) {
+            background-image: none;
+        }
+    }
+}
+
+.page__wrapper {
+    background-repeat: no-repeat;
+
+    &--posters,
+    &--gallery {
+        @include mq(768) {
+            background-image: url(../images/decor/events-mobile.svg);
+            background-repeat: no-repeat;
+
+            background-size: 200vw;
+            background-position: top 90vh right -400px;
+        }
     }
 }
 
@@ -72,10 +122,11 @@
     &--rooms {
         @include fz(160, 50);
         width: min-content;
-@include mq(768){
-    margin-left: auto;
-    margin-right: auto;
-}
+
+        @include mq(768) {
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }
 

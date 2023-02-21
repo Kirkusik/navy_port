@@ -1,3 +1,13 @@
+.single-event {
+    @include mq(768) {
+        background-image: url(../images/decor/events-mobile.svg);
+        background-repeat: no-repeat;
+
+        background-size: cover;
+        background-position: top -100px right -740px;
+    }
+}
+
 .single-event__main-order {
     margin: 100px auto;
 
@@ -186,6 +196,7 @@
 }
 
 .event-location__slider-img {
+    width: 100%;
     border-radius: 40px;
     object-fit: cover;
 

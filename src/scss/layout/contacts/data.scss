@@ -1,4 +1,11 @@
-.contacts-data {
+.contacts-wrapper {
+    @include mq(768) {
+        background-image: url(../images/decor/events-desktop.svg);
+        background-repeat: no-repeat;
+
+        background-size: cover;
+        background-position: top -100px right -740px;
+    }
 }
 
 .contacts-data__wrapper {

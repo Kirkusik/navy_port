@@ -1,5 +1,5 @@
 export default function createHomeHotelSlider(Swiper) {
-    const homeHotelSlider = new Swiper(".hotel__slider", {
+    const homeHotelSlider = new Swiper('.hotel__slider', {
         slidesPerView: 2,
         spaceBetween: 100,
         centeredSlides: true,
@@ -7,8 +7,8 @@ export default function createHomeHotelSlider(Swiper) {
         loop: true,
 
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
 
         breakpoints: {
@@ -19,9 +19,10 @@ export default function createHomeHotelSlider(Swiper) {
             },
 
             768: {
-                slidesPerView: 2,
-                spaceBetween: 100,
-                centeredSlides: true,
+                initialSlide: 0,
+                slidesPerView: 1,
+                spaceBetween: 40,
+                centeredSlides: false,
             },
 
             1200: {

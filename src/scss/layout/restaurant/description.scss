@@ -1,4 +1,19 @@
 .restaurant-description {
+    background-image: url(../images/decor/restaurant-desktop.svg);
+    background-size: contain;
+    background-position: top 75% left;
+    background-repeat: no-repeat;
+
+    @include mq(768) {
+        background-image: url(../images/decor/restaurant-mobile-1.svg),
+            url(../images/decor/restaurant-mobile-2.svg);
+        background-position: top right, bottom 0 right;
+        background-size: contain, 100% auto;
+        padding-bottom: 200px;
+    }
+    @include mq(576) {
+        padding-bottom: 100px;
+    }
 }
 
 .restaurant-description__title {

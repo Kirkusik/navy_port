@@ -1,3 +1,15 @@
+.events {
+    background-image: url(../images/decor/events-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top -60px right;
+    background-size: 100vw 90%;
+
+    @include mq(992) {
+        background-size: contain;
+        background-position: top -20px right;
+    }
+}
+
 .events__wrapper {
     margin-top: 82px;
 }

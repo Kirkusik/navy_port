@@ -1,4 +1,21 @@
 .about-pool {
+    background-image: url(../images/decor/pool-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top 20% center;
+    // background-size: 100vw;
+
+    padding-bottom: 200px;
+
+    @include mq(880) {
+        background-image: url(../images/decor/pool-mobile-1.svg),
+            url(../images/decor/pool-mobile-2.svg);
+        background-position: top -30px right, bottom right;
+        background-size: auto, 100vw;
+        padding-bottom: 260px;
+    }
+    @include mq(576) {
+        padding-bottom: 160px;
+    }
 }
 
 .about-pool__description {
@@ -112,6 +129,7 @@
 .pool-order__btn {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 40px;
 
     @include mq(576) {
         min-width: 180px;
