@@ -459,10 +459,30 @@ template {
   font-family: "Eastman", sans-serif;
   color: #10243a;
   background-color: #fbfbfc;
+  background-repeat: no-repeat;
 }
 
 .page__body--w-popup {
   overflow: hidden;
+}
+
+.page__body--home {
+  background-image: url(../images/decor/home-desktop.svg);
+  background-position: top 600px left -200px;
+}
+
+.page__body--hotel {
+  background-image: url(../images/decor/hotel-desktop.svg);
+  background-position: top 200vh center;
+}
+
+.page__body--room {
+  background-image: url(../images/decor/hotel-desktop.svg);
+  background-position: top 120vh center;
+}
+
+.page__wrapper {
+  background-repeat: no-repeat;
 }
 
 .page__main {
@@ -1063,6 +1083,11 @@ template {
   margin-bottom: 30px;
 }
 
+.main-menu__sublist-item img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .main-menu__sublist-link {
   display: -ms-grid;
   display: grid;
@@ -1073,10 +1098,6 @@ template {
     );
   line-height: 150%;
   color: #ffffff;
-}
-
-.main-menu__sublist-link img {
-  margin-top: 30px;
 }
 
 .nav-meta {
@@ -1268,7 +1289,7 @@ template {
   bottom: -40px;
   left: -10%;
   width: 120%;
-  height: 162px;
+  height: 140px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(-5.5%, #94a9bf), color-stop(40%, #ffffff));
   background: -o-linear-gradient(top, #94a9bf -5.5%, #ffffff 40%);
   background: linear-gradient(180deg, #94a9bf -5.5%, #ffffff 40%);
@@ -1317,12 +1338,12 @@ template {
 }
 
 .about-us {
-  padding-top: 100px;
+  padding-top: 40px;
   padding-bottom: 100px;
 }
 
 .about-us__title {
-  margin-bottom: 154px;
+  margin-bottom: 80px;
   margin-top: 0;
 }
 
@@ -1555,8 +1576,8 @@ template {
   padding: 35px 32px;
   display: -ms-grid;
   display: grid;
-  grid-auto-rows: -webkit-min-content -webkit-min-content 1fr;
-  grid-auto-rows: min-content min-content 1fr;
+  grid-auto-rows: -webkit-min-content -webkit-min-content -webkit-min-content 1fr;
+  grid-auto-rows: min-content min-content min-content 1fr;
   background-size: 260px 70px;
   background-repeat: no-repeat;
   background-position: bottom 35px left 32px;
@@ -1593,6 +1614,10 @@ template {
 
 .contact__address-link {
   color: inherit;
+  margin-top: 16px;
+}
+
+.contact__address-link:first-of-type {
   margin-top: 30px;
 }
 
@@ -1641,10 +1666,6 @@ template {
 }
 
 .rooms {
-  background-image: url(../images/inner-decor.svg);
-  background-size: 100%;
-  background-position: bottom center;
-  background-repeat: no-repeat;
   padding-bottom: 60px;
 }
 
@@ -1699,6 +1720,9 @@ template {
 
 .room__img-wrapper {
   margin: 0;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
   -webkit-box-shadow: 0px 12px 10px rgba(16, 36, 58, 0.4);
           box-shadow: 0px 12px 10px rgba(16, 36, 58, 0.4);
   overflow: hidden;
@@ -1718,7 +1742,7 @@ template {
 .room__img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 600px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1850,8 +1874,7 @@ template {
   border-radius: 0px 40px 40px 0px;
   -ms-grid-row-span: 2;
   grid-row: span 2;
-  -ms-grid-row-align: start;
-      align-self: start;
+  min-height: 100%;
 }
 
 .room-data__order {
@@ -1871,19 +1894,18 @@ template {
 .room-data__item {
   font-weight: 300;
   font-size: calc(
-        14px + (28 - 14) * (100vw - 320px) /
+        14px + (24 - 14) * (100vw - 320px) /
             (1920 - 320)
     );
   line-height: 125%;
   padding-left: 80px;
-  padding-top: 6px;
-  padding-bottom: 6px;
   background-repeat: no-repeat;
   background-position: left center;
+  background-size: contain;
 }
 
 .room-data__item:not(:last-child) {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .no-webp .room-data__item--wifi {
@@ -1917,7 +1939,8 @@ template {
   background-image: url(../images/room-icons/wardrobe.png); }
 
 .room-data__specification {
-  padding-bottom: 116px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   padding-left: 86px;
   padding-right: 86px;
 }
@@ -1965,6 +1988,13 @@ template {
 .room-data__add-img:nth-of-type(3) {
   border-radius: 40px;
   margin-left: 86px;
+}
+
+.restaurant-description {
+  background-image: url(../images/decor/restaurant-desktop.svg);
+  background-size: contain;
+  background-position: top 75% left;
+  background-repeat: no-repeat;
 }
 
 .restaurant-description__title {
@@ -2129,6 +2159,13 @@ template {
   margin-bottom: 0;
 }
 
+.about-pool {
+  background-image: url(../images/decor/pool-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: top 20% center;
+  padding-bottom: 200px;
+}
+
 .about-pool__description {
   padding-left: 86px;
   padding-right: 86px;
@@ -2196,6 +2233,7 @@ template {
 .pool-order__btn {
   margin-left: auto;
   margin-right: auto;
+  margin-top: 40px;
 }
 
 .about-pool__text {
@@ -2212,6 +2250,13 @@ template {
 
 .about-pool__text p {
   margin: 0;
+}
+
+.events {
+  background-image: url(../images/decor/events-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: top -60px right;
+  background-size: 100vw 90%;
 }
 
 .events__wrapper {
@@ -2472,6 +2517,7 @@ template {
 }
 
 .event-location__slider-img {
+  width: 100%;
   border-radius: 40px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -2774,6 +2820,27 @@ template {
   color: #000000;
   margin-top: 0;
   margin-bottom: 90px;
+}
+
+.contact-slider-title {
+  font-size: calc(
+        16px + (24 - 16) * (100vw - 320px) /
+            (1920 - 320)
+    );
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  z-index: 2;
 }
 
 .gallery-slides {
@@ -3301,7 +3368,7 @@ template {
     padding: 160px 80px 100px;
   }
 
-  .main-menu__sublist-link img {
+  .main-menu__sublist-item img {
     height: 160px;
   }
 
@@ -3350,12 +3417,7 @@ template {
   }
 
   .about-us {
-    padding-top: 80px;
     padding-bottom: 80px;
-  }
-
-  .about-us__title {
-    margin-bottom: 120px;
   }
 
   .about-us__description {
@@ -3494,7 +3556,7 @@ template {
   }
 
   .room-data__item:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .room-data__specification {
@@ -3752,7 +3814,7 @@ template {
     padding: 120px 60px 80px;
   }
 
-  .main-menu__sublist-link img {
+  .main-menu__sublist-item img {
     height: 100px;
   }
 
@@ -3776,12 +3838,7 @@ template {
   }
 
   .about-us {
-    padding-top: 60px;
     padding-bottom: 60px;
-  }
-
-  .about-us__title {
-    margin-bottom: 80px;
   }
 
   .hotel {
@@ -3938,6 +3995,11 @@ template {
     left: 10%;
   }
 
+  .events {
+    background-size: contain;
+    background-position: top -20px right;
+  }
+
   .contacts-data__wrapper {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -4087,6 +4149,13 @@ template {
     margin-top: 60px;
   }
 
+  .about-pool {
+    background-image: url(../images/decor/pool-mobile-1.svg), url(../images/decor/pool-mobile-2.svg);
+    background-position: top -30px right, bottom right;
+    background-size: auto, 100vw;
+    padding-bottom: 260px;
+  }
+
   .about-pool__description {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -4151,6 +4220,30 @@ template {
 }
 
 @media (max-width: 768px) {
+  .page__body--home {
+    background-image: url(../images/decor/home-mobile.svg);
+    background-size: 797px;
+    background-position: top 85vh left -40px;
+  }
+
+  .page__body--hotel {
+    background-image: url(../images/decor/hotel-mobile.svg);
+    background-position: top 93vh left -60px;
+    background-size: auto 2000px;
+  }
+
+  .page__body--room {
+    background-image: none;
+  }
+
+  .page__wrapper--posters,
+  .page__wrapper--gallery {
+    background-image: url(../images/decor/events-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 200vw;
+    background-position: top 90vh right -400px;
+  }
+
   .page__title--rooms {
     margin-left: auto;
     margin-right: auto;
@@ -4186,7 +4279,6 @@ template {
   }
 
   .about-us {
-    padding-top: 40px;
     padding-bottom: 40px;
   }
 
@@ -4204,12 +4296,23 @@ template {
   }
 
   .hotel__slider-item {
-    max-width: 80%;
+    max-width: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
   .hotel__nav-btn {
     width: 40px;
     height: 40px;
+    top: 40%;
+  }
+
+  .hotel__nav-btn.swiper-button-prev {
+    left: 60px;
+  }
+
+  .hotel__nav-btn.swiper-button-next {
+    right: 60px;
   }
 
   .contact__wrapper {
@@ -4326,6 +4429,13 @@ template {
     margin-right: 30px;
   }
 
+  .restaurant-description {
+    background-image: url(../images/decor/restaurant-mobile-1.svg), url(../images/decor/restaurant-mobile-2.svg);
+    background-position: top right, bottom 0 right;
+    background-size: contain, 100% auto;
+    padding-bottom: 200px;
+  }
+
   .restaurant-description__block {
     padding-left: 30px;
     padding-right: 30px;
@@ -4433,6 +4543,13 @@ template {
     margin-right: auto;
   }
 
+  .single-event {
+    background-image: url(../images/decor/events-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top -100px right -740px;
+  }
+
   .single-event__main-order {
     margin-top: 53px;
     margin-bottom: 30px;
@@ -4523,6 +4640,13 @@ template {
 
   .single-event__slider-btn {
     top: 150px;
+  }
+
+  .contacts-wrapper {
+    background-image: url(../images/decor/events-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top -100px right -740px;
   }
 
   .contacts-data__wrapper {
@@ -4822,6 +4946,14 @@ template {
 
   .room-data__specification {
     margin-top: 30px;
+  }
+
+  .restaurant-description {
+    padding-bottom: 100px;
+  }
+
+  .about-pool {
+    padding-bottom: 160px;
   }
 
   .pool-order__btn {
